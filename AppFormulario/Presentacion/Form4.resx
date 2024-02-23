@@ -120,10 +120,7 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>132, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
+  <data name="label6.Text" xml:space="preserve">
+    <value>No olvides descargar estos documentos, firmar electrónicamente el Convenio de Prácticas y el Compromiso Presupuestario y subir los documentos (junto a una fotocopia del DNI en formato pdf) a la web de Gestión de Prácticas en Empresa ETSIT</value>
+  </data>
 </root>

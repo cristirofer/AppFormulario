@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CancelarButton = new Button();
-            ContinuarButton = new Button();
+            AnteriorButton = new Button();
+            GenerarButton = new Button();
             label1 = new Label();
             menuStrip1 = new MenuStrip();
             eToolStripMenuItem = new ToolStripMenuItem();
@@ -44,23 +44,23 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // CancelarButton
+            // AnteriorButton
             // 
-            CancelarButton.Location = new Point(873, 696);
-            CancelarButton.Name = "CancelarButton";
-            CancelarButton.Size = new Size(75, 23);
-            CancelarButton.TabIndex = 148;
-            CancelarButton.Text = "Anterior";
-            CancelarButton.UseVisualStyleBackColor = true;
+            AnteriorButton.Location = new Point(873, 696);
+            AnteriorButton.Name = "AnteriorButton";
+            AnteriorButton.Size = new Size(75, 23);
+            AnteriorButton.TabIndex = 148;
+            AnteriorButton.Text = "Anterior";
+            AnteriorButton.UseVisualStyleBackColor = true;
             // 
-            // ContinuarButton
+            // GenerarButton
             // 
-            ContinuarButton.Location = new Point(976, 696);
-            ContinuarButton.Name = "ContinuarButton";
-            ContinuarButton.Size = new Size(75, 23);
-            ContinuarButton.TabIndex = 147;
-            ContinuarButton.Text = "Continuar";
-            ContinuarButton.UseVisualStyleBackColor = true;
+            GenerarButton.Location = new Point(976, 696);
+            GenerarButton.Name = "GenerarButton";
+            GenerarButton.Size = new Size(75, 23);
+            GenerarButton.TabIndex = 147;
+            GenerarButton.Text = "Generar";
+            GenerarButton.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -141,8 +141,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1102, 741);
             Controls.Add(dataGridView1);
-            Controls.Add(CancelarButton);
-            Controls.Add(ContinuarButton);
+            Controls.Add(AnteriorButton);
+            Controls.Add(GenerarButton);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             Name = "Form3";
@@ -155,8 +155,8 @@
         }
 
         #endregion
-        private Button CancelarButton;
-        private Button ContinuarButton;
+        private Button AnteriorButton;
+        private Button GenerarButton;
         private Label label1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem eToolStripMenuItem;

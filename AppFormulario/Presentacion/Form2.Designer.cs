@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CancelarButton = new Button();
+            components = new System.ComponentModel.Container();
+            AnteriorButton = new Button();
             ContinuarButton = new Button();
-            textBox19 = new TextBox();
-            textBox18 = new TextBox();
-            textBox17 = new TextBox();
-            textBox16 = new TextBox();
-            textBox15 = new TextBox();
-            textBox14 = new TextBox();
+            CargoResponsableTextBox = new TextBox();
+            DNIResponsableTextBox = new TextBox();
+            DescripcionTextBox = new TextBox();
+            NombreResponsableTextBox = new TextBox();
+            EntidadTextBox = new TextBox();
+            TitulacionTutor2TextBox = new TextBox();
             label20 = new Label();
             label19 = new Label();
             label18 = new Label();
@@ -44,20 +45,20 @@
             label14 = new Label();
             label13 = new Label();
             label12 = new Label();
-            textBox10 = new TextBox();
+            EmailTutorTextBox = new TextBox();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
-            textBox9 = new TextBox();
-            textBox7 = new TextBox();
-            textBox6 = new TextBox();
-            textBox4 = new TextBox();
+            DNITutorTextBox = new TextBox();
+            NombreTutorTextBox = new TextBox();
+            BolsaTextBox = new TextBox();
+            FinTextBox = new TextBox();
             label7 = new Label();
             label4 = new Label();
             label3 = new Label();
-            textBox2 = new TextBox();
+            InicioTextBox = new TextBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            NumSolicitudTextBox = new TextBox();
             menuStrip1 = new MenuStrip();
             eToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
@@ -65,17 +66,17 @@
             label2 = new Label();
             radioButton1 = new RadioButton();
             radioButton2 = new RadioButton();
-            textBox3 = new TextBox();
-            textBox5 = new TextBox();
+            DepartamentoTutorTextBox = new TextBox();
+            CargoTutor2TextBox = new TextBox();
             label6 = new Label();
             label11 = new Label();
-            textBox8 = new TextBox();
+            EmailTutor2TextBox = new TextBox();
             label21 = new Label();
             label22 = new Label();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
+            DNITutor2TextBox = new TextBox();
+            NombreTutor2TextBox = new TextBox();
             label17 = new Label();
-            textBox13 = new TextBox();
+            ClaveTextBox = new TextBox();
             groupBox3 = new GroupBox();
             groupBox4 = new GroupBox();
             groupBox1 = new GroupBox();
@@ -92,6 +93,7 @@
             groupBox14 = new GroupBox();
             groupBox15 = new GroupBox();
             groupBox16 = new GroupBox();
+            notifyIcon1 = new NotifyIcon(components);
             menuStrip1.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -103,14 +105,15 @@
             groupBox15.SuspendLayout();
             SuspendLayout();
             // 
-            // CancelarButton
+            // AnteriorButton
             // 
-            CancelarButton.Location = new Point(873, 698);
-            CancelarButton.Name = "CancelarButton";
-            CancelarButton.Size = new Size(75, 23);
-            CancelarButton.TabIndex = 93;
-            CancelarButton.Text = "Anterior";
-            CancelarButton.UseVisualStyleBackColor = true;
+            AnteriorButton.Location = new Point(873, 698);
+            AnteriorButton.Name = "AnteriorButton";
+            AnteriorButton.Size = new Size(75, 23);
+            AnteriorButton.TabIndex = 93;
+            AnteriorButton.Text = "Anterior";
+            AnteriorButton.UseVisualStyleBackColor = true;
+            AnteriorButton.Click += AnteriorButton_Click;
             // 
             // ContinuarButton
             // 
@@ -121,48 +124,48 @@
             ContinuarButton.Text = "Continuar";
             ContinuarButton.UseVisualStyleBackColor = true;
             // 
-            // textBox19
+            // CargoResponsableTextBox
             // 
-            textBox19.Location = new Point(744, 638);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(241, 23);
-            textBox19.TabIndex = 91;
+            CargoResponsableTextBox.Location = new Point(744, 638);
+            CargoResponsableTextBox.Name = "CargoResponsableTextBox";
+            CargoResponsableTextBox.Size = new Size(241, 23);
+            CargoResponsableTextBox.TabIndex = 91;
             // 
-            // textBox18
+            // DNIResponsableTextBox
             // 
-            textBox18.Location = new Point(744, 596);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(241, 23);
-            textBox18.TabIndex = 90;
+            DNIResponsableTextBox.Location = new Point(744, 596);
+            DNIResponsableTextBox.Name = "DNIResponsableTextBox";
+            DNIResponsableTextBox.Size = new Size(241, 23);
+            DNIResponsableTextBox.TabIndex = 90;
             // 
-            // textBox17
+            // DescripcionTextBox
             // 
-            textBox17.Location = new Point(744, 92);
-            textBox17.Multiline = true;
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(241, 63);
-            textBox17.TabIndex = 89;
+            DescripcionTextBox.Location = new Point(744, 92);
+            DescripcionTextBox.Multiline = true;
+            DescripcionTextBox.Name = "DescripcionTextBox";
+            DescripcionTextBox.Size = new Size(241, 63);
+            DescripcionTextBox.TabIndex = 89;
             // 
-            // textBox16
+            // NombreResponsableTextBox
             // 
-            textBox16.Location = new Point(249, 638);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(241, 23);
-            textBox16.TabIndex = 88;
+            NombreResponsableTextBox.Location = new Point(249, 638);
+            NombreResponsableTextBox.Name = "NombreResponsableTextBox";
+            NombreResponsableTextBox.Size = new Size(241, 23);
+            NombreResponsableTextBox.TabIndex = 88;
             // 
-            // textBox15
+            // EntidadTextBox
             // 
-            textBox15.Location = new Point(249, 596);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(241, 23);
-            textBox15.TabIndex = 87;
+            EntidadTextBox.Location = new Point(249, 596);
+            EntidadTextBox.Name = "EntidadTextBox";
+            EntidadTextBox.Size = new Size(241, 23);
+            EntidadTextBox.TabIndex = 87;
             // 
-            // textBox14
+            // TitulacionTutor2TextBox
             // 
-            textBox14.Location = new Point(249, 512);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(241, 23);
-            textBox14.TabIndex = 86;
+            TitulacionTutor2TextBox.Location = new Point(249, 512);
+            TitulacionTutor2TextBox.Name = "TitulacionTutor2TextBox";
+            TitulacionTutor2TextBox.Size = new Size(241, 23);
+            TitulacionTutor2TextBox.TabIndex = 86;
             // 
             // label20
             // 
@@ -236,12 +239,12 @@
             label12.TabIndex = 73;
             label12.Text = "Departamento";
             // 
-            // textBox10
+            // EmailTutorTextBox
             // 
-            textBox10.Location = new Point(249, 336);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(241, 23);
-            textBox10.TabIndex = 72;
+            EmailTutorTextBox.Location = new Point(249, 336);
+            EmailTutorTextBox.Name = "EmailTutorTextBox";
+            EmailTutorTextBox.Size = new Size(241, 23);
+            EmailTutorTextBox.TabIndex = 72;
             // 
             // label10
             // 
@@ -270,33 +273,33 @@
             label8.TabIndex = 68;
             label8.Text = "Bolsa Ayuda";
             // 
-            // textBox9
+            // DNITutorTextBox
             // 
-            textBox9.Location = new Point(744, 295);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(241, 23);
-            textBox9.TabIndex = 67;
+            DNITutorTextBox.Location = new Point(744, 295);
+            DNITutorTextBox.Name = "DNITutorTextBox";
+            DNITutorTextBox.Size = new Size(241, 23);
+            DNITutorTextBox.TabIndex = 67;
             // 
-            // textBox7
+            // NombreTutorTextBox
             // 
-            textBox7.Location = new Point(249, 295);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(241, 23);
-            textBox7.TabIndex = 66;
+            NombreTutorTextBox.Location = new Point(249, 295);
+            NombreTutorTextBox.Name = "NombreTutorTextBox";
+            NombreTutorTextBox.Size = new Size(241, 23);
+            NombreTutorTextBox.TabIndex = 66;
             // 
-            // textBox6
+            // BolsaTextBox
             // 
-            textBox6.Location = new Point(249, 214);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(241, 23);
-            textBox6.TabIndex = 65;
+            BolsaTextBox.Location = new Point(249, 214);
+            BolsaTextBox.Name = "BolsaTextBox";
+            BolsaTextBox.Size = new Size(241, 23);
+            BolsaTextBox.TabIndex = 65;
             // 
-            // textBox4
+            // FinTextBox
             // 
-            textBox4.Location = new Point(744, 173);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(241, 23);
-            textBox4.TabIndex = 63;
+            FinTextBox.Location = new Point(744, 173);
+            FinTextBox.Name = "FinTextBox";
+            FinTextBox.Size = new Size(241, 23);
+            FinTextBox.TabIndex = 63;
             // 
             // label7
             // 
@@ -325,12 +328,12 @@
             label3.TabIndex = 58;
             label3.Text = "Tipo";
             // 
-            // textBox2
+            // InicioTextBox
             // 
-            textBox2.Location = new Point(249, 173);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(241, 23);
-            textBox2.TabIndex = 56;
+            InicioTextBox.Location = new Point(249, 173);
+            InicioTextBox.Name = "InicioTextBox";
+            InicioTextBox.Size = new Size(241, 23);
+            InicioTextBox.TabIndex = 56;
             // 
             // label1
             // 
@@ -344,12 +347,12 @@
             label1.TabIndex = 55;
             label1.Text = "Convenio Prácticas";
             // 
-            // textBox1
+            // NumSolicitudTextBox
             // 
-            textBox1.Location = new Point(249, 92);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(241, 23);
-            textBox1.TabIndex = 54;
+            NumSolicitudTextBox.Location = new Point(249, 92);
+            NumSolicitudTextBox.Name = "NumSolicitudTextBox";
+            NumSolicitudTextBox.Size = new Size(241, 23);
+            NumSolicitudTextBox.TabIndex = 54;
             // 
             // menuStrip1
             // 
@@ -413,19 +416,19 @@
             radioButton2.Text = "No Curricular";
             radioButton2.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // DepartamentoTutorTextBox
             // 
-            textBox3.Location = new Point(744, 336);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(241, 23);
-            textBox3.TabIndex = 102;
+            DepartamentoTutorTextBox.Location = new Point(744, 336);
+            DepartamentoTutorTextBox.Name = "DepartamentoTutorTextBox";
+            DepartamentoTutorTextBox.Size = new Size(241, 23);
+            DepartamentoTutorTextBox.TabIndex = 102;
             // 
-            // textBox5
+            // CargoTutor2TextBox
             // 
-            textBox5.Location = new Point(744, 473);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(241, 23);
-            textBox5.TabIndex = 110;
+            CargoTutor2TextBox.Location = new Point(744, 473);
+            CargoTutor2TextBox.Name = "CargoTutor2TextBox";
+            CargoTutor2TextBox.Size = new Size(241, 23);
+            CargoTutor2TextBox.TabIndex = 110;
             // 
             // label6
             // 
@@ -445,12 +448,12 @@
             label11.TabIndex = 108;
             label11.Text = "Cargo";
             // 
-            // textBox8
+            // EmailTutor2TextBox
             // 
-            textBox8.Location = new Point(249, 473);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(241, 23);
-            textBox8.TabIndex = 107;
+            EmailTutor2TextBox.Location = new Point(249, 473);
+            EmailTutor2TextBox.Name = "EmailTutor2TextBox";
+            EmailTutor2TextBox.Size = new Size(241, 23);
+            EmailTutor2TextBox.TabIndex = 107;
             // 
             // label21
             // 
@@ -470,19 +473,19 @@
             label22.TabIndex = 105;
             label22.Text = "Nombre y Apellidos";
             // 
-            // textBox11
+            // DNITutor2TextBox
             // 
-            textBox11.Location = new Point(744, 433);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(241, 23);
-            textBox11.TabIndex = 104;
+            DNITutor2TextBox.Location = new Point(744, 433);
+            DNITutor2TextBox.Name = "DNITutor2TextBox";
+            DNITutor2TextBox.Size = new Size(241, 23);
+            DNITutor2TextBox.TabIndex = 104;
             // 
-            // textBox12
+            // NombreTutor2TextBox
             // 
-            textBox12.Location = new Point(249, 433);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(241, 23);
-            textBox12.TabIndex = 103;
+            NombreTutor2TextBox.Location = new Point(249, 433);
+            NombreTutor2TextBox.Name = "NombreTutor2TextBox";
+            NombreTutor2TextBox.Size = new Size(241, 23);
+            NombreTutor2TextBox.TabIndex = 103;
             // 
             // label17
             // 
@@ -493,12 +496,12 @@
             label17.TabIndex = 111;
             label17.Text = "Clave Específica/Orgánica";
             // 
-            // textBox13
+            // ClaveTextBox
             // 
-            textBox13.Location = new Point(744, 214);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(241, 23);
-            textBox13.TabIndex = 112;
+            ClaveTextBox.Location = new Point(744, 214);
+            ClaveTextBox.Name = "ClaveTextBox";
+            ClaveTextBox.Size = new Size(241, 23);
+            ClaveTextBox.TabIndex = 112;
             // 
             // groupBox3
             // 
@@ -664,33 +667,38 @@
             groupBox16.TabStop = false;
             groupBox16.Text = "Datos Personales";
             // 
+            // notifyIcon1
+            // 
+            notifyIcon1.Text = "notifyIcon1";
+            notifyIcon1.Visible = true;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1102, 741);
-            Controls.Add(textBox13);
+            Controls.Add(ClaveTextBox);
             Controls.Add(label17);
-            Controls.Add(textBox5);
+            Controls.Add(CargoTutor2TextBox);
             Controls.Add(label6);
             Controls.Add(label11);
-            Controls.Add(textBox8);
+            Controls.Add(EmailTutor2TextBox);
             Controls.Add(label21);
             Controls.Add(label22);
-            Controls.Add(textBox11);
-            Controls.Add(textBox12);
-            Controls.Add(textBox3);
+            Controls.Add(DNITutor2TextBox);
+            Controls.Add(NombreTutor2TextBox);
+            Controls.Add(DepartamentoTutorTextBox);
             Controls.Add(radioButton2);
             Controls.Add(radioButton1);
             Controls.Add(label5);
-            Controls.Add(CancelarButton);
+            Controls.Add(AnteriorButton);
             Controls.Add(ContinuarButton);
-            Controls.Add(textBox19);
-            Controls.Add(textBox18);
-            Controls.Add(textBox17);
-            Controls.Add(textBox16);
-            Controls.Add(textBox15);
-            Controls.Add(textBox14);
+            Controls.Add(CargoResponsableTextBox);
+            Controls.Add(DNIResponsableTextBox);
+            Controls.Add(DescripcionTextBox);
+            Controls.Add(NombreResponsableTextBox);
+            Controls.Add(EntidadTextBox);
+            Controls.Add(TitulacionTutor2TextBox);
             Controls.Add(label20);
             Controls.Add(label19);
             Controls.Add(label18);
@@ -699,21 +707,21 @@
             Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(label12);
-            Controls.Add(textBox10);
+            Controls.Add(EmailTutorTextBox);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(textBox9);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox4);
+            Controls.Add(DNITutorTextBox);
+            Controls.Add(NombreTutorTextBox);
+            Controls.Add(BolsaTextBox);
+            Controls.Add(FinTextBox);
             Controls.Add(label7);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(InicioTextBox);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(NumSolicitudTextBox);
             Controls.Add(menuStrip1);
             Controls.Add(groupBox3);
             Controls.Add(groupBox5);
@@ -737,14 +745,14 @@
         }
 
         #endregion
-        private Button CancelarButton;
+        private Button AnteriorButton;
         private Button ContinuarButton;
-        private TextBox textBox19;
-        private TextBox textBox18;
-        private TextBox textBox17;
-        private TextBox textBox16;
-        private TextBox textBox15;
-        private TextBox textBox14;
+        private TextBox CargoResponsableTextBox;
+        private TextBox DNIResponsableTextBox;
+        private TextBox DescripcionTextBox;
+        private TextBox NombreResponsableTextBox;
+        private TextBox EntidadTextBox;
+        private TextBox TitulacionTutor2TextBox;
         private Label label20;
         private Label label19;
         private Label label18;
@@ -753,20 +761,20 @@
         private Label label14;
         private Label label13;
         private Label label12;
-        private TextBox textBox10;
+        private TextBox EmailTutorTextBox;
         private Label label10;
         private Label label9;
         private Label label8;
-        private TextBox textBox9;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private TextBox textBox4;
+        private TextBox DNITutorTextBox;
+        private TextBox NombreTutorTextBox;
+        private TextBox BolsaTextBox;
+        private TextBox FinTextBox;
         private Label label7;
         private Label label4;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox InicioTextBox;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox NumSolicitudTextBox;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem eToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
@@ -774,17 +782,17 @@
         private Label label2;
         private RadioButton radioButton1;
         private RadioButton radioButton2;
-        private TextBox textBox3;
-        private TextBox textBox5;
+        private TextBox DepartamentoTutorTextBox;
+        private TextBox CargoTutor2TextBox;
         private Label label6;
         private Label label11;
-        private TextBox textBox8;
+        private TextBox EmailTutor2TextBox;
         private Label label21;
         private Label label22;
-        private TextBox textBox11;
-        private TextBox textBox12;
+        private TextBox DNITutor2TextBox;
+        private TextBox NombreTutor2TextBox;
         private Label label17;
-        private TextBox textBox13;
+        private TextBox ClaveTextBox;
         private GroupBox groupBox3;
         private GroupBox groupBox4;
         private GroupBox groupBox1;
@@ -801,5 +809,6 @@
         private GroupBox groupBox14;
         private GroupBox groupBox15;
         private GroupBox groupBox16;
+        private NotifyIcon notifyIcon1;
     }
 }

@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            NombreTextBox = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
+            PaisTextBox = new TextBox();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label6 = new Label();
             label7 = new Label();
-            textBox8 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox9 = new TextBox();
+            NacimientoTextBox = new TextBox();
+            ProvinciaTextBox = new TextBox();
+            MunicipioTextBox = new TextBox();
+            DireccionTextBox = new TextBox();
+            PostalTextBox = new TextBox();
+            TelefonoTextBox = new TextBox();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
             label11 = new Label();
-            textBox10 = new TextBox();
+            EmailTextBox = new TextBox();
             label12 = new Label();
             label13 = new Label();
-            textBox3 = new TextBox();
-            textBox12 = new TextBox();
-            textBox11 = new TextBox();
-            textBox13 = new TextBox();
+            DNITextBox = new TextBox();
+            NIFTextBox = new TextBox();
+            NumeroAfiliacionTextBox = new TextBox();
+            LetraAfiliacionTextBox = new TextBox();
             label14 = new Label();
             label15 = new Label();
             label16 = new Label();
@@ -60,12 +60,12 @@
             label18 = new Label();
             label19 = new Label();
             label20 = new Label();
-            textBox14 = new TextBox();
-            textBox15 = new TextBox();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
-            textBox18 = new TextBox();
-            textBox19 = new TextBox();
+            EntidadTextBox = new TextBox();
+            DireccionAgenciaTextBox = new TextBox();
+            IBANTextBox = new TextBox();
+            AgenciaTextBox = new TextBox();
+            MunicipioTextBox2 = new TextBox();
+            CCTextBox = new TextBox();
             ContinuarButton = new Button();
             CancelarButton = new Button();
             menuStrip1 = new MenuStrip();
@@ -82,13 +82,13 @@
             groupBox3.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox1
+            // NombreTextBox
             // 
-            textBox1.Location = new Point(255, 135);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(727, 23);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            NombreTextBox.Location = new Point(255, 135);
+            NombreTextBox.Name = "NombreTextBox";
+            NombreTextBox.Size = new Size(727, 23);
+            NombreTextBox.TabIndex = 0;
+            NombreTextBox.TextChanged += textBox1_TextChanged;
             // 
             // label1
             // 
@@ -103,12 +103,13 @@
             label1.Text = "Datos Alumno";
             label1.Click += label1_Click;
             // 
-            // textBox2
+            // PaisTextBox
             // 
-            textBox2.Location = new Point(255, 216);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(241, 23);
-            textBox2.TabIndex = 2;
+            PaisTextBox.Location = new Point(255, 216);
+            PaisTextBox.Name = "PaisTextBox";
+            PaisTextBox.Size = new Size(241, 23);
+            PaisTextBox.TabIndex = 2;
+            PaisTextBox.TextChanged += PaisTextBox_TextChanged;
             // 
             // label2
             // 
@@ -157,47 +158,53 @@
             label7.TabIndex = 9;
             label7.Text = "Provincia";
             // 
-            // textBox8
+            // NacimientoTextBox
             // 
-            textBox8.Location = new Point(741, 175);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(241, 23);
-            textBox8.TabIndex = 14;
+            NacimientoTextBox.Location = new Point(741, 175);
+            NacimientoTextBox.Name = "NacimientoTextBox";
+            NacimientoTextBox.Size = new Size(241, 23);
+            NacimientoTextBox.TabIndex = 14;
+            NacimientoTextBox.TextChanged += NacimientoTextBox_TextChanged;
             // 
-            // textBox4
+            // ProvinciaTextBox
             // 
-            textBox4.Location = new Point(741, 216);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(241, 23);
-            textBox4.TabIndex = 15;
+            ProvinciaTextBox.Location = new Point(741, 216);
+            ProvinciaTextBox.Name = "ProvinciaTextBox";
+            ProvinciaTextBox.Size = new Size(241, 23);
+            ProvinciaTextBox.TabIndex = 15;
+            ProvinciaTextBox.TextChanged += ProvinciaTextBox_TextChanged;
             // 
-            // textBox5
+            // MunicipioTextBox
             // 
-            textBox5.Location = new Point(741, 257);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(241, 23);
-            textBox5.TabIndex = 16;
+            MunicipioTextBox.Location = new Point(741, 257);
+            MunicipioTextBox.Name = "MunicipioTextBox";
+            MunicipioTextBox.Size = new Size(241, 23);
+            MunicipioTextBox.TabIndex = 16;
+            MunicipioTextBox.TextChanged += MunicipioTextBox_TextChanged;
             // 
-            // textBox6
+            // DireccionTextBox
             // 
-            textBox6.Location = new Point(255, 257);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(241, 23);
-            textBox6.TabIndex = 17;
+            DireccionTextBox.Location = new Point(255, 257);
+            DireccionTextBox.Name = "DireccionTextBox";
+            DireccionTextBox.Size = new Size(241, 23);
+            DireccionTextBox.TabIndex = 17;
+            DireccionTextBox.TextChanged += DireccionTextBox_TextChanged;
             // 
-            // textBox7
+            // PostalTextBox
             // 
-            textBox7.Location = new Point(255, 298);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(241, 23);
-            textBox7.TabIndex = 18;
+            PostalTextBox.Location = new Point(255, 298);
+            PostalTextBox.Name = "PostalTextBox";
+            PostalTextBox.Size = new Size(241, 23);
+            PostalTextBox.TabIndex = 18;
+            PostalTextBox.TextChanged += PostalTextBox_TextChanged;
             // 
-            // textBox9
+            // TelefonoTextBox
             // 
-            textBox9.Location = new Point(741, 298);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(241, 23);
-            textBox9.TabIndex = 19;
+            TelefonoTextBox.Location = new Point(741, 298);
+            TelefonoTextBox.Name = "TelefonoTextBox";
+            TelefonoTextBox.Size = new Size(241, 23);
+            TelefonoTextBox.TabIndex = 19;
+            TelefonoTextBox.TextChanged += TelefonoTextBox_TextChanged;
             // 
             // label8
             // 
@@ -235,12 +242,13 @@
             label11.TabIndex = 23;
             label11.Text = "Municipio";
             // 
-            // textBox10
+            // EmailTextBox
             // 
-            textBox10.Location = new Point(255, 339);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(241, 23);
-            textBox10.TabIndex = 24;
+            EmailTextBox.Location = new Point(255, 339);
+            EmailTextBox.Name = "EmailTextBox";
+            EmailTextBox.Size = new Size(241, 23);
+            EmailTextBox.TabIndex = 24;
+            EmailTextBox.TextChanged += EmailTextBox_TextChanged;
             // 
             // label12
             // 
@@ -260,33 +268,37 @@
             label13.TabIndex = 27;
             label13.Text = "Correo Electrónico";
             // 
-            // textBox3
+            // DNITextBox
             // 
-            textBox3.Location = new Point(255, 175);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(191, 23);
-            textBox3.TabIndex = 29;
+            DNITextBox.Location = new Point(255, 175);
+            DNITextBox.Name = "DNITextBox";
+            DNITextBox.Size = new Size(191, 23);
+            DNITextBox.TabIndex = 29;
+            DNITextBox.TextChanged += DNITextBox_TextChanged;
             // 
-            // textBox12
+            // NIFTextBox
             // 
-            textBox12.Location = new Point(468, 175);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(28, 23);
-            textBox12.TabIndex = 30;
+            NIFTextBox.Location = new Point(468, 175);
+            NIFTextBox.Name = "NIFTextBox";
+            NIFTextBox.Size = new Size(28, 23);
+            NIFTextBox.TabIndex = 30;
+            NIFTextBox.TextChanged += NIFTextBox_TextChanged;
             // 
-            // textBox11
+            // NumeroAfiliacionTextBox
             // 
-            textBox11.Location = new Point(741, 336);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(191, 23);
-            textBox11.TabIndex = 31;
+            NumeroAfiliacionTextBox.Location = new Point(741, 336);
+            NumeroAfiliacionTextBox.Name = "NumeroAfiliacionTextBox";
+            NumeroAfiliacionTextBox.Size = new Size(191, 23);
+            NumeroAfiliacionTextBox.TabIndex = 31;
+            NumeroAfiliacionTextBox.TextChanged += NumeroAfiliacionTextBox_TextChanged;
             // 
-            // textBox13
+            // LetraAfiliacionTextBox
             // 
-            textBox13.Location = new Point(954, 336);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(28, 23);
-            textBox13.TabIndex = 32;
+            LetraAfiliacionTextBox.Location = new Point(954, 336);
+            LetraAfiliacionTextBox.Name = "LetraAfiliacionTextBox";
+            LetraAfiliacionTextBox.Size = new Size(28, 23);
+            LetraAfiliacionTextBox.TabIndex = 32;
+            LetraAfiliacionTextBox.TextChanged += LetraAfiliacionTextBox_TextChanged;
             // 
             // label14
             // 
@@ -351,47 +363,53 @@
             label20.TabIndex = 39;
             label20.Text = "Número Libreta o C/C ";
             // 
-            // textBox14
+            // EntidadTextBox
             // 
-            textBox14.Location = new Point(255, 492);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(241, 23);
-            textBox14.TabIndex = 40;
+            EntidadTextBox.Location = new Point(255, 492);
+            EntidadTextBox.Name = "EntidadTextBox";
+            EntidadTextBox.Size = new Size(241, 23);
+            EntidadTextBox.TabIndex = 40;
+            EntidadTextBox.TextChanged += EntidadTextBox_TextChanged;
             // 
-            // textBox15
+            // DireccionAgenciaTextBox
             // 
-            textBox15.Location = new Point(255, 534);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(241, 23);
-            textBox15.TabIndex = 41;
+            DireccionAgenciaTextBox.Location = new Point(255, 534);
+            DireccionAgenciaTextBox.Name = "DireccionAgenciaTextBox";
+            DireccionAgenciaTextBox.Size = new Size(241, 23);
+            DireccionAgenciaTextBox.TabIndex = 41;
+            DireccionAgenciaTextBox.TextChanged += DireccionAgenciaTextBox_TextChanged;
             // 
-            // textBox16
+            // IBANTextBox
             // 
-            textBox16.Location = new Point(255, 576);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(241, 23);
-            textBox16.TabIndex = 42;
+            IBANTextBox.Location = new Point(255, 576);
+            IBANTextBox.Name = "IBANTextBox";
+            IBANTextBox.Size = new Size(241, 23);
+            IBANTextBox.TabIndex = 42;
+            IBANTextBox.TextChanged += IBANTextBox_TextChanged;
             // 
-            // textBox17
+            // AgenciaTextBox
             // 
-            textBox17.Location = new Point(741, 492);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(241, 23);
-            textBox17.TabIndex = 43;
+            AgenciaTextBox.Location = new Point(741, 492);
+            AgenciaTextBox.Name = "AgenciaTextBox";
+            AgenciaTextBox.Size = new Size(241, 23);
+            AgenciaTextBox.TabIndex = 43;
+            AgenciaTextBox.TextChanged += AgenciaTextBox_TextChanged;
             // 
-            // textBox18
+            // MunicipioTextBox2
             // 
-            textBox18.Location = new Point(741, 534);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(241, 23);
-            textBox18.TabIndex = 44;
+            MunicipioTextBox2.Location = new Point(741, 534);
+            MunicipioTextBox2.Name = "MunicipioTextBox2";
+            MunicipioTextBox2.Size = new Size(241, 23);
+            MunicipioTextBox2.TabIndex = 44;
+            MunicipioTextBox2.TextChanged += MunicipioTextBox2_TextChanged;
             // 
-            // textBox19
+            // CCTextBox
             // 
-            textBox19.Location = new Point(741, 576);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(241, 23);
-            textBox19.TabIndex = 45;
+            CCTextBox.Location = new Point(741, 576);
+            CCTextBox.Name = "CCTextBox";
+            CCTextBox.Size = new Size(241, 23);
+            CCTextBox.TabIndex = 45;
+            CCTextBox.TextChanged += CCTextBox_TextChanged;
             // 
             // ContinuarButton
             // 
@@ -401,6 +419,8 @@
             ContinuarButton.TabIndex = 46;
             ContinuarButton.Text = "Continuar";
             ContinuarButton.UseVisualStyleBackColor = true;
+            ContinuarButton.Click += ContinuarButton_Click;
+            ContinuarButton.MouseClick += ContinuarButton_Click2;
             // 
             // CancelarButton
             // 
@@ -410,6 +430,7 @@
             CancelarButton.TabIndex = 47;
             CancelarButton.Text = "Cancelar";
             CancelarButton.UseVisualStyleBackColor = true;
+            CancelarButton.Click += CancelarButton_Click;
             // 
             // menuStrip1
             // 
@@ -498,12 +519,12 @@
             Controls.Add(label21);
             Controls.Add(CancelarButton);
             Controls.Add(ContinuarButton);
-            Controls.Add(textBox19);
-            Controls.Add(textBox18);
-            Controls.Add(textBox17);
-            Controls.Add(textBox16);
-            Controls.Add(textBox15);
-            Controls.Add(textBox14);
+            Controls.Add(CCTextBox);
+            Controls.Add(MunicipioTextBox2);
+            Controls.Add(AgenciaTextBox);
+            Controls.Add(IBANTextBox);
+            Controls.Add(DireccionAgenciaTextBox);
+            Controls.Add(EntidadTextBox);
             Controls.Add(label20);
             Controls.Add(label19);
             Controls.Add(label18);
@@ -511,31 +532,31 @@
             Controls.Add(label16);
             Controls.Add(label15);
             Controls.Add(label14);
-            Controls.Add(textBox13);
-            Controls.Add(textBox11);
-            Controls.Add(textBox12);
-            Controls.Add(textBox3);
+            Controls.Add(LetraAfiliacionTextBox);
+            Controls.Add(NumeroAfiliacionTextBox);
+            Controls.Add(NIFTextBox);
+            Controls.Add(DNITextBox);
             Controls.Add(label13);
             Controls.Add(label12);
-            Controls.Add(textBox10);
+            Controls.Add(EmailTextBox);
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(textBox9);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox8);
+            Controls.Add(TelefonoTextBox);
+            Controls.Add(PostalTextBox);
+            Controls.Add(DireccionTextBox);
+            Controls.Add(MunicipioTextBox);
+            Controls.Add(ProvinciaTextBox);
+            Controls.Add(NacimientoTextBox);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox2);
+            Controls.Add(PaisTextBox);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(NombreTextBox);
             Controls.Add(menuStrip1);
             Controls.Add(groupBox1);
             Controls.Add(groupBox3);
@@ -553,31 +574,31 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox NombreTextBox;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox PaisTextBox;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label6;
         private Label label7;
-        private TextBox textBox8;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox9;
+        private TextBox NacimientoTextBox;
+        private TextBox ProvinciaTextBox;
+        private TextBox MunicipioTextBox;
+        private TextBox DireccionTextBox;
+        private TextBox PostalTextBox;
+        private TextBox TelefonoTextBox;
         private Label label8;
         private Label label9;
         private Label label10;
         private Label label11;
-        private TextBox textBox10;
+        private TextBox EmailTextBox;
         private Label label12;
         private Label label13;
-        private TextBox textBox3;
-        private TextBox textBox12;
-        private TextBox textBox11;
-        private TextBox textBox13;
+        private TextBox DNITextBox;
+        private TextBox NIFTextBox;
+        private TextBox NumeroAfiliacionTextBox;
+        private TextBox LetraAfiliacionTextBox;
         private Label label14;
         private Label label15;
         private Label label16;
@@ -585,12 +606,12 @@
         private Label label18;
         private Label label19;
         private Label label20;
-        private TextBox textBox14;
-        private TextBox textBox15;
-        private TextBox textBox16;
-        private TextBox textBox17;
-        private TextBox textBox18;
-        private TextBox textBox19;
+        private TextBox EntidadTextBox;
+        private TextBox DireccionAgenciaTextBox;
+        private TextBox IBANTextBox;
+        private TextBox AgenciaTextBox;
+        private TextBox MunicipioTextBox2;
+        private TextBox CCTextBox;
         private Button ContinuarButton;
         private Button CancelarButton;
         private MenuStrip menuStrip1;
