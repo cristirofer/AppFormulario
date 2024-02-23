@@ -63,9 +63,9 @@ namespace AppFormulario.Presentacion
         {
             try
             {
-                Form form2;
-                form2 = new Form2();
-                form2.Show();
+                Form form1;
+                form1 = new Form2();
+                form1.Show();
                 this.Close();
             }
             catch (ServiceException) { }
