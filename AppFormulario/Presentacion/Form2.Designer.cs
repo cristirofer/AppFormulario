@@ -123,6 +123,7 @@
             ContinuarButton.TabIndex = 92;
             ContinuarButton.Text = "Continuar";
             ContinuarButton.UseVisualStyleBackColor = true;
+            ContinuarButton.Click += ContinuarButton_Click;
             // 
             // CargoResponsableTextBox
             // 
@@ -130,6 +131,7 @@
             CargoResponsableTextBox.Name = "CargoResponsableTextBox";
             CargoResponsableTextBox.Size = new Size(241, 23);
             CargoResponsableTextBox.TabIndex = 91;
+            CargoResponsableTextBox.TextChanged += CargoResponsableTextBox_TextChanged;
             // 
             // DNIResponsableTextBox
             // 
@@ -137,6 +139,7 @@
             DNIResponsableTextBox.Name = "DNIResponsableTextBox";
             DNIResponsableTextBox.Size = new Size(241, 23);
             DNIResponsableTextBox.TabIndex = 90;
+            DNIResponsableTextBox.TextChanged += DNIResponsableTextBox_TextChanged;
             // 
             // DescripcionTextBox
             // 
@@ -145,6 +148,7 @@
             DescripcionTextBox.Name = "DescripcionTextBox";
             DescripcionTextBox.Size = new Size(241, 63);
             DescripcionTextBox.TabIndex = 89;
+            DescripcionTextBox.TextChanged += DescripcionTextBox_TextChanged;
             // 
             // NombreResponsableTextBox
             // 
@@ -152,6 +156,7 @@
             NombreResponsableTextBox.Name = "NombreResponsableTextBox";
             NombreResponsableTextBox.Size = new Size(241, 23);
             NombreResponsableTextBox.TabIndex = 88;
+            NombreResponsableTextBox.TextChanged += NombreResponsableTextBox_TextChanged;
             // 
             // EntidadTextBox
             // 
@@ -159,6 +164,7 @@
             EntidadTextBox.Name = "EntidadTextBox";
             EntidadTextBox.Size = new Size(241, 23);
             EntidadTextBox.TabIndex = 87;
+            EntidadTextBox.TextChanged += EntidadTextBox_TextChanged;
             // 
             // TitulacionTutor2TextBox
             // 
@@ -166,6 +172,7 @@
             TitulacionTutor2TextBox.Name = "TitulacionTutor2TextBox";
             TitulacionTutor2TextBox.Size = new Size(241, 23);
             TitulacionTutor2TextBox.TabIndex = 86;
+            TitulacionTutor2TextBox.TextChanged += TitulacionTutor2TextBox_TextChanged;
             // 
             // label20
             // 
@@ -245,6 +252,7 @@
             EmailTutorTextBox.Name = "EmailTutorTextBox";
             EmailTutorTextBox.Size = new Size(241, 23);
             EmailTutorTextBox.TabIndex = 72;
+            EmailTutorTextBox.TextChanged += EmailTutorTextBox_TextChanged;
             // 
             // label10
             // 
@@ -279,6 +287,7 @@
             DNITutorTextBox.Name = "DNITutorTextBox";
             DNITutorTextBox.Size = new Size(241, 23);
             DNITutorTextBox.TabIndex = 67;
+            DNITutorTextBox.TextChanged += DNITutorTextBox_TextChanged;
             // 
             // NombreTutorTextBox
             // 
@@ -286,6 +295,7 @@
             NombreTutorTextBox.Name = "NombreTutorTextBox";
             NombreTutorTextBox.Size = new Size(241, 23);
             NombreTutorTextBox.TabIndex = 66;
+            NombreTutorTextBox.TextChanged += NombreTutorTextBox_TextChanged;
             // 
             // BolsaTextBox
             // 
@@ -293,6 +303,7 @@
             BolsaTextBox.Name = "BolsaTextBox";
             BolsaTextBox.Size = new Size(241, 23);
             BolsaTextBox.TabIndex = 65;
+            BolsaTextBox.TextChanged += BolsaTextBox_TextChanged;
             // 
             // FinTextBox
             // 
@@ -300,6 +311,7 @@
             FinTextBox.Name = "FinTextBox";
             FinTextBox.Size = new Size(241, 23);
             FinTextBox.TabIndex = 63;
+            FinTextBox.TextChanged += FinTextBox_TextChanged;
             // 
             // label7
             // 
@@ -334,6 +346,7 @@
             InicioTextBox.Name = "InicioTextBox";
             InicioTextBox.Size = new Size(241, 23);
             InicioTextBox.TabIndex = 56;
+            InicioTextBox.TextChanged += InicioTextBox_TextChanged;
             // 
             // label1
             // 
@@ -353,6 +366,7 @@
             NumSolicitudTextBox.Name = "NumSolicitudTextBox";
             NumSolicitudTextBox.Size = new Size(241, 23);
             NumSolicitudTextBox.TabIndex = 54;
+            NumSolicitudTextBox.TextChanged += NumSolicitudTextBox_TextChanged;
             // 
             // menuStrip1
             // 
@@ -397,6 +411,7 @@
             // radioButton1
             // 
             radioButton1.AutoSize = true;
+            radioButton1.Checked = true;
             radioButton1.Location = new Point(249, 136);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(77, 19);
@@ -412,9 +427,9 @@
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(96, 19);
             radioButton2.TabIndex = 101;
-            radioButton2.TabStop = true;
             radioButton2.Text = "No Curricular";
             radioButton2.UseVisualStyleBackColor = true;
+            radioButton2.CheckedChanged += radioButton2_CheckedChanged;
             // 
             // DepartamentoTutorTextBox
             // 
@@ -422,6 +437,7 @@
             DepartamentoTutorTextBox.Name = "DepartamentoTutorTextBox";
             DepartamentoTutorTextBox.Size = new Size(241, 23);
             DepartamentoTutorTextBox.TabIndex = 102;
+            DepartamentoTutorTextBox.TextChanged += DepartamentoTutorTextBox_TextChanged;
             // 
             // CargoTutor2TextBox
             // 
@@ -429,6 +445,7 @@
             CargoTutor2TextBox.Name = "CargoTutor2TextBox";
             CargoTutor2TextBox.Size = new Size(241, 23);
             CargoTutor2TextBox.TabIndex = 110;
+            CargoTutor2TextBox.TextChanged += CargoTutor2TextBox_TextChanged;
             // 
             // label6
             // 
@@ -454,6 +471,7 @@
             EmailTutor2TextBox.Name = "EmailTutor2TextBox";
             EmailTutor2TextBox.Size = new Size(241, 23);
             EmailTutor2TextBox.TabIndex = 107;
+            EmailTutor2TextBox.TextChanged += EmailTutor2TextBox_TextChanged;
             // 
             // label21
             // 
@@ -479,6 +497,7 @@
             DNITutor2TextBox.Name = "DNITutor2TextBox";
             DNITutor2TextBox.Size = new Size(241, 23);
             DNITutor2TextBox.TabIndex = 104;
+            DNITutor2TextBox.TextChanged += DNITutor2TextBox_TextChanged;
             // 
             // NombreTutor2TextBox
             // 
@@ -486,6 +505,7 @@
             NombreTutor2TextBox.Name = "NombreTutor2TextBox";
             NombreTutor2TextBox.Size = new Size(241, 23);
             NombreTutor2TextBox.TabIndex = 103;
+            NombreTutor2TextBox.TextChanged += NombreTutor2TextBox_TextChanged;
             // 
             // label17
             // 
@@ -502,6 +522,7 @@
             ClaveTextBox.Name = "ClaveTextBox";
             ClaveTextBox.Size = new Size(241, 23);
             ClaveTextBox.TabIndex = 112;
+            ClaveTextBox.TextChanged += ClaveTextBox_TextChanged;
             // 
             // groupBox3
             // 

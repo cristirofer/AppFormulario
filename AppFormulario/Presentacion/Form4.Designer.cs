@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             AnteriorButton = new Button();
-            GenerarButton = new Button();
             label1 = new Label();
             menuStrip1 = new MenuStrip();
             eToolStripMenuItem = new ToolStripMenuItem();
@@ -49,21 +48,13 @@
             // 
             // AnteriorButton
             // 
-            AnteriorButton.Location = new Point(873, 707);
+            AnteriorButton.Location = new Point(928, 706);
             AnteriorButton.Name = "AnteriorButton";
             AnteriorButton.Size = new Size(75, 23);
             AnteriorButton.TabIndex = 153;
             AnteriorButton.Text = "Anterior";
             AnteriorButton.UseVisualStyleBackColor = true;
-            // 
-            // GenerarButton
-            // 
-            GenerarButton.Location = new Point(976, 707);
-            GenerarButton.Name = "GenerarButton";
-            GenerarButton.Size = new Size(75, 23);
-            GenerarButton.TabIndex = 152;
-            GenerarButton.Text = "Generar";
-            GenerarButton.UseVisualStyleBackColor = true;
+            AnteriorButton.Click += AnteriorButton_Click;
             // 
             // label1
             // 
@@ -199,7 +190,6 @@
             Controls.Add(linkLabel2);
             Controls.Add(linkLabel1);
             Controls.Add(AnteriorButton);
-            Controls.Add(GenerarButton);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             Name = "Form4";

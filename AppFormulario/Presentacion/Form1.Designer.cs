@@ -77,6 +77,16 @@
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
             groupBox4 = new GroupBox();
+            label5 = new Label();
+            label22 = new Label();
+            label25 = new Label();
+            label26 = new Label();
+            label28 = new Label();
+            label31 = new Label();
+            label32 = new Label();
+            label23 = new Label();
+            label27 = new Label();
+            label29 = new Label();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -286,7 +296,7 @@
             // 
             // NumeroAfiliacionTextBox
             // 
-            NumeroAfiliacionTextBox.Location = new Point(741, 336);
+            NumeroAfiliacionTextBox.Location = new Point(741, 339);
             NumeroAfiliacionTextBox.Name = "NumeroAfiliacionTextBox";
             NumeroAfiliacionTextBox.Size = new Size(191, 23);
             NumeroAfiliacionTextBox.TabIndex = 31;
@@ -294,7 +304,7 @@
             // 
             // LetraAfiliacionTextBox
             // 
-            LetraAfiliacionTextBox.Location = new Point(954, 336);
+            LetraAfiliacionTextBox.Location = new Point(954, 339);
             LetraAfiliacionTextBox.Name = "LetraAfiliacionTextBox";
             LetraAfiliacionTextBox.Size = new Size(28, 23);
             LetraAfiliacionTextBox.TabIndex = 32;
@@ -474,7 +484,7 @@
             // 
             groupBox1.Controls.Add(groupBox2);
             groupBox1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(51, 88);
+            groupBox1.Location = new Point(51, 95);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(997, 339);
             groupBox1.TabIndex = 51;
@@ -492,6 +502,9 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(label27);
+            groupBox3.Controls.Add(label29);
+            groupBox3.Controls.Add(label23);
             groupBox3.Controls.Add(groupBox4);
             groupBox3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             groupBox3.Location = new Point(51, 452);
@@ -510,11 +523,128 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Datos Personales";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Red;
+            label5.Location = new Point(255, 119);
+            label5.Name = "label5";
+            label5.Size = new Size(104, 13);
+            label5.TabIndex = 54;
+            label5.Text = "Campo obligatorio";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label22.ForeColor = Color.Red;
+            label22.Location = new Point(255, 161);
+            label22.Name = "label22";
+            label22.Size = new Size(101, 13);
+            label22.TabIndex = 55;
+            label22.Text = "Formato no válido";
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label25.ForeColor = Color.Red;
+            label25.Location = new Point(255, 283);
+            label25.Name = "label25";
+            label25.Size = new Size(101, 13);
+            label25.TabIndex = 58;
+            label25.Text = "Formato no válido";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label26.ForeColor = Color.Red;
+            label26.Location = new Point(255, 324);
+            label26.Name = "label26";
+            label26.Size = new Size(101, 13);
+            label26.TabIndex = 59;
+            label26.Text = "Formato no válido";
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label28.ForeColor = Color.Red;
+            label28.Location = new Point(741, 161);
+            label28.Name = "label28";
+            label28.Size = new Size(101, 13);
+            label28.TabIndex = 61;
+            label28.Text = "Formato no válido";
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label31.ForeColor = Color.Red;
+            label31.Location = new Point(741, 283);
+            label31.Name = "label31";
+            label31.Size = new Size(101, 13);
+            label31.TabIndex = 64;
+            label31.Text = "Formato no válido";
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label32.ForeColor = Color.Red;
+            label32.Location = new Point(741, 324);
+            label32.Name = "label32";
+            label32.Size = new Size(99, 13);
+            label32.TabIndex = 65;
+            label32.Text = "Número no válido";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label23.ForeColor = Color.Red;
+            label23.Location = new Point(204, 25);
+            label23.Name = "label23";
+            label23.Size = new Size(195, 13);
+            label23.TabIndex = 66;
+            label23.Text = "Nombre de la Entidad no es correcto";
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label27.ForeColor = Color.Red;
+            label27.Location = new Point(690, 108);
+            label27.Name = "label27";
+            label27.Size = new Size(101, 13);
+            label27.TabIndex = 68;
+            label27.Text = "Formato no válido";
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label29.ForeColor = Color.Red;
+            label29.Location = new Point(204, 108);
+            label29.Name = "label29";
+            label29.Size = new Size(101, 13);
+            label29.TabIndex = 69;
+            label29.Text = "Formato no válido";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1102, 741);
+            Controls.Add(label32);
+            Controls.Add(label31);
+            Controls.Add(label28);
+            Controls.Add(label26);
+            Controls.Add(label25);
+            Controls.Add(label22);
+            Controls.Add(label5);
             Controls.Add(TitulacionComboBox);
             Controls.Add(label21);
             Controls.Add(CancelarButton);
@@ -558,8 +688,8 @@
             Controls.Add(label1);
             Controls.Add(NombreTextBox);
             Controls.Add(menuStrip1);
-            Controls.Add(groupBox1);
             Controls.Add(groupBox3);
+            Controls.Add(groupBox1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Rellenar Datos Alumno";
@@ -568,6 +698,7 @@
             menuStrip1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -623,5 +754,15 @@
         private GroupBox groupBox2;
         private GroupBox groupBox3;
         private GroupBox groupBox4;
+        private Label label5;
+        private Label label22;
+        private Label label25;
+        private Label label26;
+        private Label label28;
+        private Label label31;
+        private Label label32;
+        private Label label23;
+        private Label label27;
+        private Label label29;
     }
 }

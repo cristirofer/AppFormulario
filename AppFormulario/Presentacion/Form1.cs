@@ -17,31 +17,32 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics.Eventing.Reader;
+using System.Text.RegularExpressions;
 
 namespace AppFormulario
 {
-    public partial class Form1 : Form
+    public partial class Form1 : FormBase
     {
-        private string nombre = "";
-        private string DNI = "";
-        private string NIF = "";
-        private string pais = "";
-        private string nacimiento = "";
-        private string provincia = "";
-        private string municipio = "";
-        private string postal = "";
-        private string direccion = "";
-        private string telefono = "";
-        private string email = "";
-        private string NUSS = "";
-        private string NUSSLetra = "";
-        private string titulacion = "";
-        private string entidadBanco = "";
-        private string agenciaBanco = "";
-        private string direccionBanco = "";
-        private string municipioBanco = "";
-        private string IBAN = "";
-        private string CC = "";
+        public string nombre = "";
+        public string DNI = "";
+        public string NIF = "";
+        public string pais = "";
+        public string nacimiento = "";
+        public string provincia = "";
+        public string municipio = "";
+        public string postal = "";
+        public string direccion = "";
+        public string telefono = "";
+        public string email = "";
+        public string NUSS = "";
+        public string NUSSLetra = "";
+        public string titulacion = "";
+        public string entidadBanco = "";
+        public string agenciaBanco = "";
+        public string direccionBanco = "";
+        public string municipioBanco = "";
+        public string IBAN = "";
+        public string CC = "";
         public Form1()
         {
             InitializeComponent();
@@ -51,7 +52,7 @@ namespace AppFormulario
         private bool checkButton()
         {
             bool b = nombre == "" || DNI == "" || NIF == "" || pais == "" || nacimiento == "" || provincia == "" || municipio == "" || postal == "" || direccion == "" || telefono == "" || email == "" || NUSS == "" || NUSSLetra == "" || entidadBanco == "" || agenciaBanco == "" || direccionBanco == "" || municipioBanco == "" || IBAN == "" || CC == "";
-            if (b) return false;
+            if (b) return true;
             else return true;
         }
 
@@ -182,14 +183,21 @@ namespace AppFormulario
         }
         private void EmailTextBox_TextChanged(object sender, EventArgs e)
         {
-            email = EmailTextBox.Text;
-            if (checkButton())
-            {
-                ContinuarButton.Enabled = true;
+            string patron = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            if (Regex.IsMatch(EmailTextBox.Text.Trim(), patron)){
+                email = EmailTextBox.Text;
+                if (checkButton())
+                {
+                    ContinuarButton.Enabled = true;
+                }
+                else
+                {
+                    ContinuarButton.Enabled = false;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                EmailTextBox.Clear();
             }
         }
         private void NumeroAfiliacionTextBox_TextChanged(object sender, EventArgs e)
@@ -313,10 +321,10 @@ namespace AppFormulario
         {
             try
             {
-                Form form2;
+                FormBase form2;
                 form2 = new Form2();
-                form2.Show();
-                this.Close();
+                form2.ShowDialog();
+                //this.Close();
             }
             catch (ServiceException) { }
         }
@@ -330,9 +338,9 @@ namespace AppFormulario
         {
             try
             {
-                Form form2;
+                FormBase form2;
                 form2 = new Form2();
-                form2.Show();
+                form2.ShowDialog();
                 this.Close();
             }
             catch (ServiceException) { }
