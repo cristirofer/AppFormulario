@@ -94,6 +94,8 @@
             groupBox15 = new GroupBox();
             groupBox16 = new GroupBox();
             notifyIcon1 = new NotifyIcon(components);
+            label23 = new Label();
+            label24 = new Label();
             menuStrip1.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -526,6 +528,8 @@
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(label24);
+            groupBox3.Controls.Add(label23);
             groupBox3.Controls.Add(groupBox4);
             groupBox3.Controls.Add(groupBox1);
             groupBox3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
@@ -693,6 +697,28 @@
             notifyIcon1.Text = "notifyIcon1";
             notifyIcon1.Visible = true;
             // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label23.ForeColor = Color.Red;
+            label23.Location = new Point(195, 17);
+            label23.Name = "label23";
+            label23.Size = new Size(99, 13);
+            label23.TabIndex = 115;
+            label23.Text = "Número no válido";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label24.ForeColor = Color.Red;
+            label24.Location = new Point(690, 99);
+            label24.Name = "label24";
+            label24.Size = new Size(99, 13);
+            label24.TabIndex = 116;
+            label24.Text = "Número no válido";
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -754,6 +780,7 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox5.ResumeLayout(false);
             groupBox7.ResumeLayout(false);
@@ -831,5 +858,7 @@
         private GroupBox groupBox15;
         private GroupBox groupBox16;
         private NotifyIcon notifyIcon1;
+        private Label label23;
+        private Label label24;
     }
 }
