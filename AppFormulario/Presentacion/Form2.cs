@@ -20,6 +20,8 @@ using System.Diagnostics.Eventing.Reader;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Net;
+using System.Text.RegularExpressions;
+using System.Globalization;
 
 
 namespace AppFormulario.Presentacion
@@ -51,6 +53,16 @@ namespace AppFormulario.Presentacion
         {
             InitializeComponent();
             ContinuarButton.Enabled = false;
+            numSolLabel.Visible= false;
+            fechaInicioLabel.Visible= false;
+            fechaFinLabel.Visible= false;
+            bolsaLabel.Visible= false;
+            claveLabel.Visible= false;
+            correoEmpresaLabel.Visible= false;
+            correoUPVLabel.Visible= false;
+            DNIEmpresaLabel.Visible= false;
+            DNIUPVLabel.Visible= false;
+            DNIResponsablelabel.Visible= false;
         }
         private bool checkButton()
         {
@@ -80,14 +92,23 @@ namespace AppFormulario.Presentacion
 
         private void NumSolicitudTextBox_TextChanged(object sender, EventArgs e)
         {
-            numeroSolicitud = NumSolicitudTextBox.Text;
-            if (checkButton())
+            string patron = @"^\d{7}$";
+            if (Regex.IsMatch(NumSolicitudTextBox.Text.Trim(), patron))
             {
-                ContinuarButton.Enabled = true;
+                numeroSolicitud = NumSolicitudTextBox.Text;
+                numSolLabel.Visible = false;
+                if (checkButton())
+                {
+                    ContinuarButton.Enabled = true;
+                }
+                else
+                {
+                    ContinuarButton.Enabled = false;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                numSolLabel.Visible = true;
             }
         }
 
@@ -119,41 +140,107 @@ namespace AppFormulario.Presentacion
 
         private void InicioTextBox_TextChanged(object sender, EventArgs e)
         {
-            fechaInicio = InicioTextBox.Text;
-            if (checkButton())
+            string[] formatosFecha = { "dd/MM/yyyy" };
+            DateTime fecha;
+            if (DateTime.TryParseExact(InicioTextBox.Text.Trim(), formatosFecha, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out fecha))
             {
-                ContinuarButton.Enabled = true;
+                if (fecha.Date >= DateTime.Now.AddDays(15).Date) {
+                    fechaInicio = InicioTextBox.Text;
+                    fechaInicioLabel.Visible = false;
+                    if (checkButton())
+                    {
+                        ContinuarButton.Enabled = true;
+                    }
+                    else
+                    {
+                        ContinuarButton.Enabled = false;
+                    }
+                }
+                else
+                {
+                    fechaInicioLabel.Text = "Al menos 15 días de antelación";
+                    fechaInicioLabel.Visible = true;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                fechaInicioLabel.Text = "Formato no válido";
+                fechaInicioLabel.Visible = true;
             }
         }
 
         private void FinTextBox_TextChanged(object sender, EventArgs e)
         {
-            fechaFin = FinTextBox.Text;
-            if (checkButton())
+            string[] formatosFecha = { "dd/MM/yyyy" };
+            DateTime fecha;
+            if (DateTime.TryParseExact(FinTextBox.Text.Trim(), formatosFecha, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out fecha))
             {
-                ContinuarButton.Enabled = true;
+                // Convertir la cadena en un objeto DateTime
+                DateTime fechaDateTime = DateTime.ParseExact(FinTextBox.Text.Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
+
+                // Crear una fecha del 1 de septiembre del mismo año
+                DateTime limite = new DateTime(fechaDateTime.Year, 9, 1);
+
+                // Verificar si la fecha es antes o igual al 31 de agosto del mismo año
+                if (fechaDateTime < limite)
+                {
+                    fechaFin = FinTextBox.Text;
+                    fechaFinLabel.Visible = false;
+                    if (checkButton())
+                    {
+                        ContinuarButton.Enabled = true;
+                    }
+                    else
+                    {
+                        ContinuarButton.Enabled = false;
+                    }
+                }
+                else
+                {
+                    fechaFinLabel.Text = "Debe ser antes del 1 de Septiembre";
+                    fechaFinLabel.Visible = true;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                fechaFinLabel.Text = "Formato no válido";
+                fechaFinLabel.Visible = true;
             }
         }
 
         private void BolsaTextBox_TextChanged(object sender, EventArgs e)
         {
-            bolsa = BolsaTextBox.Text;
-            if (checkButton())
+            /*decimal resultado;
+            if (decimal.TryParse(BolsaTextBox.Text.Trim(), out resultado))
             {
-                ContinuarButton.Enabled = true;
+                decimal valor = decimal.Parse(BolsaTextBox.Text.Trim(), CultureInfo.InvariantCulture);
+
+                // Verificar si el número es mayor o igual a 4,60
+                if(decimal.Parse(BolsaTextBox.Text.Trim()) <= 4.60m || valor <= 4.60m)
+                {*/
+                    bolsa = BolsaTextBox.Text;
+                    bolsaLabel.Visible = false;
+                    if (checkButton())
+                    {
+                        ContinuarButton.Enabled = true;
+                    }
+                    else
+                    {
+                        ContinuarButton.Enabled = false;
+                    }
+                /*}
+                else
+                {
+                    bolsaLabel.Text = "Bolsa mínima es 4,60€ ";
+                    bolsaLabel.Visible = true;
+                }
+                
             }
             else
             {
-                ContinuarButton.Enabled = false;
-            }
+                bolsaLabel.Text = "Formato no válido";
+                bolsaLabel.Visible = true;
+            }*/
         }
 
         private void ClaveTextBox_TextChanged(object sender, EventArgs e)
@@ -184,14 +271,32 @@ namespace AppFormulario.Presentacion
 
         private void DNITutorTextBox_TextChanged(object sender, EventArgs e)
         {
-            DNITutorUPV = DNITutorTextBox.Text;
-            if (checkButton())
+            string patron = @"^\d{8}[A-Za-z]$";
+            if (Regex.IsMatch(DNITutorTextBox.Text.Trim(), patron))
             {
-                ContinuarButton.Enabled = true;
+                if (DNITutorEmpresa != DNITutorTextBox.Text && DNIResponsable != DNITutorTextBox.Text)
+                {
+                    DNITutorUPV = DNITutorTextBox.Text;
+                    DNIUPVLabel.Visible = false;
+                    if (checkButton())
+                    {
+                        ContinuarButton.Enabled = true;
+                    }
+                    else
+                    {
+                        ContinuarButton.Enabled = false;
+                    }
+                }
+                else
+                {
+                    DNIUPVLabel.Text = "Tutor UPV no puede ser Tutor o Responsable Empresa";
+                    DNIUPVLabel.Visible = true;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                DNIUPVLabel.Text = "Formato no válido";
+                DNIUPVLabel.Visible = true;
             }
         }
 
@@ -236,14 +341,32 @@ namespace AppFormulario.Presentacion
 
         private void DNITutor2TextBox_TextChanged(object sender, EventArgs e)
         {
-            DNITutorEmpresa = DNITutor2TextBox.Text;
-            if (checkButton())
+            string patron = @"^\d{8}[A-Za-z]$";
+            if (Regex.IsMatch(DNITutor2TextBox.Text.Trim(), patron))
             {
-                ContinuarButton.Enabled = true;
+                if (DNITutorUPV != DNITutor2TextBox.Text)
+                {
+                    DNITutorEmpresa = DNITutor2TextBox.Text;
+                    DNIEmpresaLabel.Visible = false;
+                    if (checkButton())
+                    {
+                        ContinuarButton.Enabled = true;
+                    }
+                    else
+                    {
+                        ContinuarButton.Enabled = false;
+                    }
+                }
+                else
+                {
+                    DNIEmpresaLabel.Text = "Tutor UPV no puede ser Tutor o Responsable Empresa";
+                    DNIEmpresaLabel.Visible = true;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                DNIEmpresaLabel.Text = "Formato no válido";
+                DNIEmpresaLabel.Visible = true;
             }
         }
 
@@ -301,14 +424,32 @@ namespace AppFormulario.Presentacion
 
         private void DNIResponsableTextBox_TextChanged(object sender, EventArgs e)
         {
-            DNIResponsable = DNIResponsableTextBox.Text;
-            if (checkButton())
+            string patron = @"^\d{8}[A-Za-z]$";
+            if (Regex.IsMatch(DNIResponsableTextBox.Text.Trim(), patron))
             {
-                ContinuarButton.Enabled = true;
+                if (DNITutorUPV != DNIResponsableTextBox.Text)
+                {
+                    DNIResponsable = DNIResponsableTextBox.Text;
+                    DNIResponsablelabel.Visible = false;
+                    if (checkButton())
+                    {
+                        ContinuarButton.Enabled = true;
+                    }
+                    else
+                    {
+                        ContinuarButton.Enabled = false;
+                    }
+                }
+                else
+                {
+                    DNIResponsablelabel.Text = "Tutor UPV no puede ser Tutor o Responsable Empresa";
+                    DNIResponsablelabel.Visible = true;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                DNIResponsablelabel.Text = "Formato no válido";
+                DNIResponsablelabel.Visible = true;
             }
         }
 

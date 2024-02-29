@@ -76,17 +76,18 @@
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
+            CCLabel = new Label();
+            IBANLabel = new Label();
             groupBox4 = new GroupBox();
-            label5 = new Label();
+            DNIlabel = new Label();
+            postalLabel = new Label();
+            emailLabel = new Label();
+            fechaLabel = new Label();
+            telefonoLabel = new Label();
+            NUSSLabel = new Label();
+            NIETextBox = new TextBox();
+            NIELabel = new Label();
             label22 = new Label();
-            label25 = new Label();
-            label26 = new Label();
-            label28 = new Label();
-            label31 = new Label();
-            label32 = new Label();
-            label23 = new Label();
-            label27 = new Label();
-            label29 = new Label();
             menuStrip1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -128,17 +129,17 @@
             label2.Name = "label2";
             label2.Size = new Size(112, 15);
             label2.TabIndex = 4;
-            label2.Text = "Apellidos y Nombre";
+            label2.Text = "Nombre y Apellidos";
             label2.Click += label2_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(158, 175);
+            label3.Location = new Point(179, 175);
             label3.Name = "label3";
-            label3.Size = new Size(50, 15);
+            label3.Size = new Size(27, 15);
             label3.TabIndex = 5;
-            label3.Text = "DNI/NIE";
+            label3.Text = "DNI";
             label3.Click += label3_Click;
             // 
             // label4
@@ -153,7 +154,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(609, 175);
+            label6.Location = new Point(609, 220);
             label6.Name = "label6";
             label6.Size = new Size(103, 15);
             label6.TabIndex = 8;
@@ -162,7 +163,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(656, 216);
+            label7.Location = new Point(656, 261);
             label7.Name = "label7";
             label7.Size = new Size(56, 15);
             label7.TabIndex = 9;
@@ -170,7 +171,7 @@
             // 
             // NacimientoTextBox
             // 
-            NacimientoTextBox.Location = new Point(741, 175);
+            NacimientoTextBox.Location = new Point(741, 220);
             NacimientoTextBox.Name = "NacimientoTextBox";
             NacimientoTextBox.Size = new Size(241, 23);
             NacimientoTextBox.TabIndex = 14;
@@ -178,7 +179,7 @@
             // 
             // ProvinciaTextBox
             // 
-            ProvinciaTextBox.Location = new Point(741, 216);
+            ProvinciaTextBox.Location = new Point(741, 261);
             ProvinciaTextBox.Name = "ProvinciaTextBox";
             ProvinciaTextBox.Size = new Size(241, 23);
             ProvinciaTextBox.TabIndex = 15;
@@ -186,7 +187,7 @@
             // 
             // MunicipioTextBox
             // 
-            MunicipioTextBox.Location = new Point(741, 257);
+            MunicipioTextBox.Location = new Point(741, 302);
             MunicipioTextBox.Name = "MunicipioTextBox";
             MunicipioTextBox.Size = new Size(241, 23);
             MunicipioTextBox.TabIndex = 16;
@@ -210,7 +211,7 @@
             // 
             // TelefonoTextBox
             // 
-            TelefonoTextBox.Location = new Point(741, 298);
+            TelefonoTextBox.Location = new Point(741, 343);
             TelefonoTextBox.Name = "TelefonoTextBox";
             TelefonoTextBox.Size = new Size(241, 23);
             TelefonoTextBox.TabIndex = 19;
@@ -237,7 +238,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(660, 298);
+            label10.Location = new Point(660, 343);
             label10.Name = "label10";
             label10.Size = new Size(52, 15);
             label10.TabIndex = 22;
@@ -246,7 +247,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(651, 257);
+            label11.Location = new Point(651, 302);
             label11.Name = "label11";
             label11.Size = new Size(61, 15);
             label11.TabIndex = 23;
@@ -263,7 +264,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(587, 339);
+            label12.Location = new Point(587, 384);
             label12.Name = "label12";
             label12.Size = new Size(125, 15);
             label12.TabIndex = 26;
@@ -296,7 +297,7 @@
             // 
             // NumeroAfiliacionTextBox
             // 
-            NumeroAfiliacionTextBox.Location = new Point(741, 339);
+            NumeroAfiliacionTextBox.Location = new Point(741, 384);
             NumeroAfiliacionTextBox.Name = "NumeroAfiliacionTextBox";
             NumeroAfiliacionTextBox.Size = new Size(191, 23);
             NumeroAfiliacionTextBox.TabIndex = 31;
@@ -304,7 +305,7 @@
             // 
             // LetraAfiliacionTextBox
             // 
-            LetraAfiliacionTextBox.Location = new Point(954, 339);
+            LetraAfiliacionTextBox.Location = new Point(954, 384);
             LetraAfiliacionTextBox.Name = "LetraAfiliacionTextBox";
             LetraAfiliacionTextBox.Size = new Size(28, 23);
             LetraAfiliacionTextBox.TabIndex = 32;
@@ -502,9 +503,8 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(label27);
-            groupBox3.Controls.Add(label29);
-            groupBox3.Controls.Add(label23);
+            groupBox3.Controls.Add(CCLabel);
+            groupBox3.Controls.Add(IBANLabel);
             groupBox3.Controls.Add(groupBox4);
             groupBox3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             groupBox3.Location = new Point(51, 452);
@@ -513,6 +513,28 @@
             groupBox3.TabIndex = 53;
             groupBox3.TabStop = false;
             groupBox3.Text = "Datos Bancarios";
+            // 
+            // CCLabel
+            // 
+            CCLabel.AutoSize = true;
+            CCLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            CCLabel.ForeColor = Color.Red;
+            CCLabel.Location = new Point(690, 108);
+            CCLabel.Name = "CCLabel";
+            CCLabel.Size = new Size(101, 13);
+            CCLabel.TabIndex = 68;
+            CCLabel.Text = "Formato no válido";
+            // 
+            // IBANLabel
+            // 
+            IBANLabel.AutoSize = true;
+            IBANLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            IBANLabel.ForeColor = Color.Red;
+            IBANLabel.Location = new Point(204, 108);
+            IBANLabel.Name = "IBANLabel";
+            IBANLabel.Size = new Size(101, 13);
+            IBANLabel.TabIndex = 69;
+            IBANLabel.Text = "Formato no válido";
             // 
             // groupBox4
             // 
@@ -523,128 +545,114 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Datos Personales";
             // 
-            // label5
+            // DNIlabel
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Red;
-            label5.Location = new Point(255, 119);
-            label5.Name = "label5";
-            label5.Size = new Size(104, 13);
-            label5.TabIndex = 54;
-            label5.Text = "Campo obligatorio";
+            DNIlabel.AutoSize = true;
+            DNIlabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            DNIlabel.ForeColor = Color.Red;
+            DNIlabel.Location = new Point(255, 161);
+            DNIlabel.Name = "DNIlabel";
+            DNIlabel.Size = new Size(101, 13);
+            DNIlabel.TabIndex = 55;
+            DNIlabel.Text = "Formato no válido";
+            // 
+            // postalLabel
+            // 
+            postalLabel.AutoSize = true;
+            postalLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            postalLabel.ForeColor = Color.Red;
+            postalLabel.Location = new Point(255, 283);
+            postalLabel.Name = "postalLabel";
+            postalLabel.Size = new Size(101, 13);
+            postalLabel.TabIndex = 58;
+            postalLabel.Text = "Formato no válido";
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            emailLabel.ForeColor = Color.Red;
+            emailLabel.Location = new Point(255, 324);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new Size(101, 13);
+            emailLabel.TabIndex = 59;
+            emailLabel.Text = "Formato no válido";
+            // 
+            // fechaLabel
+            // 
+            fechaLabel.AutoSize = true;
+            fechaLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            fechaLabel.ForeColor = Color.Red;
+            fechaLabel.Location = new Point(741, 206);
+            fechaLabel.Name = "fechaLabel";
+            fechaLabel.Size = new Size(101, 13);
+            fechaLabel.TabIndex = 61;
+            fechaLabel.Text = "Formato no válido";
+            // 
+            // telefonoLabel
+            // 
+            telefonoLabel.AutoSize = true;
+            telefonoLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            telefonoLabel.ForeColor = Color.Red;
+            telefonoLabel.Location = new Point(741, 328);
+            telefonoLabel.Name = "telefonoLabel";
+            telefonoLabel.Size = new Size(101, 13);
+            telefonoLabel.TabIndex = 64;
+            telefonoLabel.Text = "Formato no válido";
+            // 
+            // NUSSLabel
+            // 
+            NUSSLabel.AutoSize = true;
+            NUSSLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NUSSLabel.ForeColor = Color.Red;
+            NUSSLabel.Location = new Point(741, 369);
+            NUSSLabel.Name = "NUSSLabel";
+            NUSSLabel.Size = new Size(101, 13);
+            NUSSLabel.TabIndex = 65;
+            NUSSLabel.Text = "Formato no válido";
+            // 
+            // NIETextBox
+            // 
+            NIETextBox.Location = new Point(741, 175);
+            NIETextBox.Name = "NIETextBox";
+            NIETextBox.Size = new Size(241, 23);
+            NIETextBox.TabIndex = 66;
+            NIETextBox.TextChanged += NIETextBox_TextChanged_1;
+            // 
+            // NIELabel
+            // 
+            NIELabel.AutoSize = true;
+            NIELabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NIELabel.ForeColor = Color.Red;
+            NIELabel.Location = new Point(741, 161);
+            NIELabel.Name = "NIELabel";
+            NIELabel.Size = new Size(101, 13);
+            NIELabel.TabIndex = 67;
+            NIELabel.Text = "Formato no válido";
             // 
             // label22
             // 
             label22.AutoSize = true;
-            label22.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label22.ForeColor = Color.Red;
-            label22.Location = new Point(255, 161);
+            label22.Location = new Point(687, 175);
             label22.Name = "label22";
-            label22.Size = new Size(101, 13);
-            label22.TabIndex = 55;
-            label22.Text = "Formato no válido";
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label25.ForeColor = Color.Red;
-            label25.Location = new Point(255, 283);
-            label25.Name = "label25";
-            label25.Size = new Size(101, 13);
-            label25.TabIndex = 58;
-            label25.Text = "Formato no válido";
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label26.ForeColor = Color.Red;
-            label26.Location = new Point(255, 324);
-            label26.Name = "label26";
-            label26.Size = new Size(101, 13);
-            label26.TabIndex = 59;
-            label26.Text = "Formato no válido";
-            // 
-            // label28
-            // 
-            label28.AutoSize = true;
-            label28.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label28.ForeColor = Color.Red;
-            label28.Location = new Point(741, 161);
-            label28.Name = "label28";
-            label28.Size = new Size(101, 13);
-            label28.TabIndex = 61;
-            label28.Text = "Formato no válido";
-            // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label31.ForeColor = Color.Red;
-            label31.Location = new Point(741, 283);
-            label31.Name = "label31";
-            label31.Size = new Size(101, 13);
-            label31.TabIndex = 64;
-            label31.Text = "Formato no válido";
-            // 
-            // label32
-            // 
-            label32.AutoSize = true;
-            label32.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label32.ForeColor = Color.Red;
-            label32.Location = new Point(741, 324);
-            label32.Name = "label32";
-            label32.Size = new Size(99, 13);
-            label32.TabIndex = 65;
-            label32.Text = "Número no válido";
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label23.ForeColor = Color.Red;
-            label23.Location = new Point(204, 25);
-            label23.Name = "label23";
-            label23.Size = new Size(195, 13);
-            label23.TabIndex = 66;
-            label23.Text = "Nombre de la Entidad no es correcto";
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label27.ForeColor = Color.Red;
-            label27.Location = new Point(690, 108);
-            label27.Name = "label27";
-            label27.Size = new Size(101, 13);
-            label27.TabIndex = 68;
-            label27.Text = "Formato no válido";
-            // 
-            // label29
-            // 
-            label29.AutoSize = true;
-            label29.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label29.ForeColor = Color.Red;
-            label29.Location = new Point(204, 108);
-            label29.Name = "label29";
-            label29.Size = new Size(101, 13);
-            label29.TabIndex = 69;
-            label29.Text = "Formato no válido";
+            label22.Size = new Size(25, 15);
+            label22.TabIndex = 68;
+            label22.Text = "NIE";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1102, 741);
-            Controls.Add(label32);
-            Controls.Add(label31);
-            Controls.Add(label28);
-            Controls.Add(label26);
-            Controls.Add(label25);
             Controls.Add(label22);
-            Controls.Add(label5);
+            Controls.Add(NIELabel);
+            Controls.Add(NIETextBox);
+            Controls.Add(NUSSLabel);
+            Controls.Add(telefonoLabel);
+            Controls.Add(fechaLabel);
+            Controls.Add(emailLabel);
+            Controls.Add(postalLabel);
+            Controls.Add(DNIlabel);
             Controls.Add(TitulacionComboBox);
             Controls.Add(label21);
             Controls.Add(CancelarButton);
@@ -754,15 +762,16 @@
         private GroupBox groupBox2;
         private GroupBox groupBox3;
         private GroupBox groupBox4;
-        private Label label5;
+        private Label DNIlabel;
+        private Label postalLabel;
+        private Label emailLabel;
+        private Label fechaLabel;
+        private Label telefonoLabel;
+        private Label NUSSLabel;
+        private Label CCLabel;
+        private Label IBANLabel;
+        private TextBox NIETextBox;
+        private Label NIELabel;
         private Label label22;
-        private Label label25;
-        private Label label26;
-        private Label label28;
-        private Label label31;
-        private Label label32;
-        private Label label23;
-        private Label label27;
-        private Label label29;
     }
 }

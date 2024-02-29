@@ -9,6 +9,7 @@ using iText.Forms;
 using iText.Kernel.Pdf;
 using System.Web;
 using System.Net.Http;
+using Microsoft.AspNetCore.Http;
 
 namespace AppFormulario.Presentacion
 {
@@ -43,10 +44,10 @@ namespace AppFormulario.Presentacion
         }
 
         public void DownloadPdf(byte[] pdfData, string fileName)
-        {
+        {/* 
             try
             {
-                HttpContext.Current.Response.Clear();
+               HttpContext.Current.Response.Clear();
                 HttpContext.Current.Response.ContentType = "application/pdf";
                 HttpContext.Current.Response.AddHeader("content-disposition", $"attachment;filename={fileName}.pdf");
                 HttpContext.Current.Response.Buffer = true;
@@ -58,6 +59,7 @@ namespace AppFormulario.Presentacion
             {
                 Console.WriteLine($"Error al descargar el PDF: {ex.Message}");
             }
+            */
         }
     }
 

@@ -18,6 +18,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Diagnostics.Eventing.Reader;
 using System.Text.RegularExpressions;
+using System.Net;
 
 namespace AppFormulario
 {
@@ -25,6 +26,7 @@ namespace AppFormulario
     {
         public string nombre = "";
         public string DNI = "";
+        public string NIE = "";
         public string NIF = "";
         public string pais = "";
         public string nacimiento = "";
@@ -47,11 +49,20 @@ namespace AppFormulario
         {
             InitializeComponent();
             ContinuarButton.Enabled = false;
+            emailLabel.Visible = false;
+            DNIlabel.Visible = false;
+            NIELabel.Visible = false;
+            postalLabel.Visible = false;
+            fechaLabel.Visible = false;
+            telefonoLabel.Visible = false;
+            NUSSLabel.Visible = false;
+            IBANLabel.Visible = false;
+            CCLabel.Visible = false;
         }
 
         private bool checkButton()
         {
-            bool b = nombre == "" || DNI == "" || NIF == "" || pais == "" || nacimiento == "" || provincia == "" || municipio == "" || postal == "" || direccion == "" || telefono == "" || email == "" || NUSS == "" || NUSSLetra == "" || entidadBanco == "" || agenciaBanco == "" || direccionBanco == "" || municipioBanco == "" || IBAN == "" || CC == "";
+            bool b = nombre == "" || ((DNI == "" && NIE == "") || (DNI != "" && NIE != "")) || pais == "" || nacimiento == "" || provincia == "" || municipio == "" || postal == "" || direccion == "" || telefono == "" || email == "" || NUSS == "" || NUSSLetra == "" || entidadBanco == "" || agenciaBanco == "" || direccionBanco == "" || municipioBanco == "" || IBAN == "" || CC == "";
             if (b) return true;
             else return true;
         }
@@ -75,39 +86,108 @@ namespace AppFormulario
         }
         private void DNITextBox_TextChanged(object sender, EventArgs e)
         {
-            DNI = DNITextBox.Text;
-            if (checkButton())
+            string patron = @"^\d{8}$";
+            if (Regex.IsMatch(DNITextBox.Text.Trim(), patron))
             {
-                ContinuarButton.Enabled = true;
+                DNI = DNITextBox.Text;
+                DNIlabel.Visible = false;
+                if (checkButton())
+                {
+                    ContinuarButton.Enabled = true;
+                }
+                else
+                {
+                    ContinuarButton.Enabled = false;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                DNIlabel.Text = "Formato no válido";
+                DNIlabel.Visible = true;
             }
+
         }
         private void NIFTextBox_TextChanged(object sender, EventArgs e)
         {
-            NIF = NIFTextBox.Text;
-            if (checkButton())
+            string patron = @"^\d{8}$";
+            if (Regex.IsMatch(DNITextBox.Text.Trim(), patron))
             {
-                ContinuarButton.Enabled = true;
+                int numeroDNI = int.Parse(DNI);
+                string[] letrasNIF = { "T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E" };
+                int indiceLetra = numeroDNI % 23;
+                if (NIFTextBox.Text.Trim() == $"{DNI}{letrasNIF[indiceLetra]}")
+                {
+                    NIF = NIFTextBox.Text;
+                    DNIlabel.Visible = false;
+                    if (checkButton())
+                    {
+                        ContinuarButton.Enabled = true;
+                    }
+                    else
+                    {
+                        ContinuarButton.Enabled = false;
+                    }
+                }
+                else
+                {
+                    DNIlabel.Text = "NIF no válido";
+                    DNIlabel.Visible = true;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                DNIlabel.Visible = true;
+                DNITextBox.Clear();
+            }
+
+        }
+        
+        private void NIETextBox_TextChanged_1(object sender, EventArgs e)
+        {
+            string patron = @"^[XYZ]\d{7}[A-Z]$";
+            if (Regex.IsMatch(NIETextBox.Text.Trim(), patron))
+            {
+                NIE = NIETextBox.Text;
+                NIELabel.Visible = false;
+                if (checkButton())
+                {
+                    ContinuarButton.Enabled = true;
+                }
+                else
+                {
+                    ContinuarButton.Enabled = false;
+                }
+            }
+            else
+            {
+                NIELabel.Text = "Formato no válido";
+                NIELabel.Visible = true;
             }
         }
+
         private void NacimientoTextBox_TextChanged(object sender, EventArgs e)
         {
-            nacimiento = NacimientoTextBox.Text;
-            if (checkButton())
+            string[] formatosFecha = { "dd/MM/yyyy" };
+            DateTime fecha;
+            if (DateTime.TryParseExact(NacimientoTextBox.Text.Trim(), formatosFecha, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out fecha))
             {
-                ContinuarButton.Enabled = true;
+                nacimiento = NacimientoTextBox.Text;
+                fechaLabel.Visible = false;
+                if (checkButton())
+                {
+                    ContinuarButton.Enabled = true;
+                }
+                else
+                {
+                    ContinuarButton.Enabled = false;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                fechaLabel.Visible = true;
             }
+
+
         }
         private void PaisTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -159,33 +239,11 @@ namespace AppFormulario
         }
         private void PostalTextBox_TextChanged(object sender, EventArgs e)
         {
-            postal = PostalTextBox.Text;
-            if (checkButton())
+            string patron = @"^\d{5}$";
+            if (Regex.IsMatch(PostalTextBox.Text.Trim(), patron))
             {
-                ContinuarButton.Enabled = true;
-            }
-            else
-            {
-                ContinuarButton.Enabled = false;
-            }
-        }
-        private void TelefonoTextBox_TextChanged(object sender, EventArgs e)
-        {
-            telefono = TelefonoTextBox.Text;
-            if (checkButton())
-            {
-                ContinuarButton.Enabled = true;
-            }
-            else
-            {
-                ContinuarButton.Enabled = false;
-            }
-        }
-        private void EmailTextBox_TextChanged(object sender, EventArgs e)
-        {
-            string patron = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
-            if (Regex.IsMatch(EmailTextBox.Text.Trim(), patron)){
-                email = EmailTextBox.Text;
+                postal = PostalTextBox.Text;
+                postalLabel.Visible = false;
                 if (checkButton())
                 {
                     ContinuarButton.Enabled = true;
@@ -197,32 +255,104 @@ namespace AppFormulario
             }
             else
             {
-                EmailTextBox.Clear();
+                postalLabel.Visible = true;
+            }
+        }
+        private void TelefonoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string patron = @"^\d{9}$";
+            if (Regex.IsMatch(TelefonoTextBox.Text.Trim(), patron))
+            {
+                telefono = TelefonoTextBox.Text;
+                telefonoLabel.Visible = false;
+                if (checkButton())
+                {
+                    ContinuarButton.Enabled = true;
+                }
+                else
+                {
+                    ContinuarButton.Enabled = false;
+                }
+            }
+            else
+            {
+                telefonoLabel.Visible = true;
+            }
+        }
+        private void EmailTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string patron = @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$";
+            if (Regex.IsMatch(EmailTextBox.Text.Trim(), patron))
+            {
+                email = EmailTextBox.Text;
+                emailLabel.Visible = false;
+                if (checkButton())
+                {
+                    ContinuarButton.Enabled = true;
+                }
+                else
+                {
+                    ContinuarButton.Enabled = false;
+                }
+            }
+            else
+            {
+                emailLabel.Visible = true;
+                //EmailTextBox.Clear();
             }
         }
         private void NumeroAfiliacionTextBox_TextChanged(object sender, EventArgs e)
         {
-            NUSS = NumeroAfiliacionTextBox.Text;
-            if (checkButton())
+
+            string patron = @"^\d{12}$";
+            if (Regex.IsMatch(NumeroAfiliacionTextBox.Text.Trim(), patron))
             {
-                ContinuarButton.Enabled = true;
+                NUSS = NumeroAfiliacionTextBox.Text;
+                NUSSLabel.Visible = false;
+                if (checkButton())
+                {
+                    ContinuarButton.Enabled = true;
+                }
+                else
+                {
+                    ContinuarButton.Enabled = false;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                NUSSLabel.Text = "Formato no válido";
+                NUSSLabel.Visible = true;
             }
         }
         private void LetraAfiliacionTextBox_TextChanged(object sender, EventArgs e)
         {
-            NUSSLetra = LetraAfiliacionTextBox.Text;
-            if (checkButton())
+            string patron = @"^\d{12}$";
+            if (Regex.IsMatch(NumeroAfiliacionTextBox.Text.Trim(), patron))
             {
-                ContinuarButton.Enabled = true;
+                if (LetraAfiliacionTextBox.Text == "T")
+                {
+                    NUSSLetra = LetraAfiliacionTextBox.Text;
+                    NUSSLabel.Visible = false;
+                    if (checkButton())
+                    {
+                        ContinuarButton.Enabled = true;
+                    }
+                    else
+                    {
+                        ContinuarButton.Enabled = false;
+                    }
+                }
+                else
+                {
+                    NUSSLabel.Text = "Letra no válida";
+                    NUSSLabel.Visible = true;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                NumeroAfiliacionTextBox.Clear();
             }
+
         }
         private void EntidadTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -274,26 +404,49 @@ namespace AppFormulario
         }
         private void IBANTextBox_TextChanged(object sender, EventArgs e)
         {
-            IBAN = IBANTextBox.Text;
-            if (checkButton())
+            string iban = IBANTextBox.Text.Replace(" ", "").ToUpper();
+            string patron = @"^ES\d{22}$";
+
+            // Verificar si el formato del IBAN es correcto mediante expresión regular
+            if (!Regex.IsMatch(iban, patron))
             {
-                ContinuarButton.Enabled = true;
+                IBAN = IBANTextBox.Text;
+                IBANLabel.Visible = false;
+                if (checkButton())
+                {
+                    ContinuarButton.Enabled = true;
+                }
+                else
+                {
+                    ContinuarButton.Enabled = false;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                IBANLabel.Visible = true;
             }
+
         }
         private void CCTextBox_TextChanged(object sender, EventArgs e)
         {
-            CC = CCTextBox.Text;
-            if (checkButton())
+            string patron = @"^\d+$";
+            if (Regex.IsMatch(CCTextBox.Text.Trim(), patron))
             {
-                ContinuarButton.Enabled = true;
+
+                CC = CCTextBox.Text;
+                CCLabel.Visible = false;
+                if (checkButton())
+                {
+                    ContinuarButton.Enabled = true;
+                }
+                else
+                {
+                    ContinuarButton.Enabled = false;
+                }
             }
             else
             {
-                ContinuarButton.Enabled = false;
+                CCLabel.Visible = true;
             }
         }
         private void label1_Click(object sender, EventArgs e)
@@ -336,15 +489,11 @@ namespace AppFormulario
 
         private void ContinuarButton_Click2(object sender, MouseEventArgs e)
         {
-            try
-            {
-                FormBase form2;
-                form2 = new Form2();
-                form2.ShowDialog();
-                this.Close();
-            }
-            catch (ServiceException) { }
+
+
         }
+
+        
     }
 
 }
