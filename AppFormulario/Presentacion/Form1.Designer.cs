@@ -72,7 +72,7 @@
             eToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             label21 = new Label();
-            TitulacionComboBox = new ComboBox();
+            titulacionComboBox = new ComboBox();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             groupBox3 = new GroupBox();
@@ -473,13 +473,14 @@
             label21.TabIndex = 49;
             label21.Text = "Titulación(es)";
             // 
-            // TitulacionComboBox
+            // titulacionComboBox
             // 
-            TitulacionComboBox.FormattingEnabled = true;
-            TitulacionComboBox.Location = new Point(255, 384);
-            TitulacionComboBox.Name = "TitulacionComboBox";
-            TitulacionComboBox.Size = new Size(241, 23);
-            TitulacionComboBox.TabIndex = 50;
+            titulacionComboBox.FormattingEnabled = true;
+            titulacionComboBox.Location = new Point(255, 384);
+            titulacionComboBox.Name = "titulacionComboBox";
+            titulacionComboBox.Size = new Size(241, 23);
+            titulacionComboBox.TabIndex = 50;
+            titulacionComboBox.SelectedIndexChanged += TitulacionComboBox_SelectedIndexChanged;
             // 
             // groupBox1
             // 
@@ -653,7 +654,7 @@
             Controls.Add(emailLabel);
             Controls.Add(postalLabel);
             Controls.Add(DNIlabel);
-            Controls.Add(TitulacionComboBox);
+            Controls.Add(titulacionComboBox);
             Controls.Add(label21);
             Controls.Add(CancelarButton);
             Controls.Add(ContinuarButton);
@@ -757,7 +758,7 @@
         private ToolStripMenuItem eToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
         private Label label21;
-        private ComboBox TitulacionComboBox;
+        private ComboBox titulacionComboBox;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private GroupBox groupBox3;
