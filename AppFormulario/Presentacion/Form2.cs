@@ -53,16 +53,17 @@ namespace AppFormulario.Presentacion
         {
             InitializeComponent();
             ContinuarButton.Enabled = false;
-            numSolLabel.Visible= false;
-            fechaInicioLabel.Visible= false;
-            fechaFinLabel.Visible= false;
-            bolsaLabel.Visible= false;
-            claveLabel.Visible= false;
-            correoEmpresaLabel.Visible= false;
-            correoUPVLabel.Visible= false;
-            DNIEmpresaLabel.Visible= false;
-            DNIUPVLabel.Visible= false;
-            DNIResponsablelabel.Visible= false;
+            numSolLabel.Visible = false;
+            fechaInicioLabel.Visible = false;
+            fechaFinLabel.Visible = false;
+            bolsaLabel.Visible = false;
+            claveLabel.Visible = false;
+            claveLabel2.Visible = false;
+            correoEmpresaLabel.Visible = false;
+            correoUPVLabel.Visible = false;
+            DNIEmpresaLabel.Visible = false;
+            DNIUPVLabel.Visible = false;
+            DNIResponsablelabel.Visible = false;
         }
         private bool checkButton()
         {
@@ -144,7 +145,8 @@ namespace AppFormulario.Presentacion
             DateTime fecha;
             if (DateTime.TryParseExact(InicioTextBox.Text.Trim(), formatosFecha, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out fecha))
             {
-                if (fecha.Date >= DateTime.Now.AddDays(15).Date) {
+                if (fecha.Date >= DateTime.Now.AddDays(15).Date)
+                {
                     fechaInicio = InicioTextBox.Text;
                     fechaInicioLabel.Visible = false;
                     if (checkButton())
@@ -218,34 +220,8 @@ namespace AppFormulario.Presentacion
                 // Verificar si el número es mayor o igual a 4,60
                 if(decimal.Parse(BolsaTextBox.Text.Trim()) <= 4.60m || valor <= 4.60m)
                 {*/
-                    bolsa = BolsaTextBox.Text;
-                    bolsaLabel.Visible = false;
-                    if (checkButton())
-                    {
-                        ContinuarButton.Enabled = true;
-                    }
-                    else
-                    {
-                        ContinuarButton.Enabled = false;
-                    }
-                /*}
-                else
-                {
-                    bolsaLabel.Text = "Bolsa mínima es 4,60€ ";
-                    bolsaLabel.Visible = true;
-                }
-                
-            }
-            else
-            {
-                bolsaLabel.Text = "Formato no válido";
-                bolsaLabel.Visible = true;
-            }*/
-        }
-
-        private void ClaveTextBox_TextChanged(object sender, EventArgs e)
-        {
-            clave = ClaveTextBox.Text;
+            bolsa = BolsaTextBox.Text;
+            bolsaLabel.Visible = false;
             if (checkButton())
             {
                 ContinuarButton.Enabled = true;
@@ -254,8 +230,68 @@ namespace AppFormulario.Presentacion
             {
                 ContinuarButton.Enabled = false;
             }
+            /*}
+            else
+            {
+                bolsaLabel.Text = "Bolsa mínima es 4,60€ ";
+                bolsaLabel.Visible = true;
+            }
+
+        }
+        else
+        {
+            bolsaLabel.Text = "Formato no válido";
+            bolsaLabel.Visible = true;
+        }*/
         }
 
+        private void ClaveTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ClaveOrgTextBox.Clear();
+            claveLabel2.Visible = false;
+            string patron = @"^\d{8}$";
+            if (Regex.IsMatch(ClaveEspTextBox.Text.Trim(), patron))
+            {
+                claveLabel.Visible = false;
+                clave = ClaveEspTextBox.Text;
+                if (checkButton())
+                {
+                    ContinuarButton.Enabled = true;
+                }
+                else
+                {
+                    ContinuarButton.Enabled = false;
+                }
+            }
+            else
+            {
+                claveLabel.Visible = true;
+            }
+        }
+
+        private void ClaveOrgTextBox_TextChanged(object sender, EventArgs e)
+        {
+            ClaveEspTextBox.Clear();
+            claveLabel.Visible = false;
+            string patron = @"^\d{9}$";
+            if (Regex.IsMatch(ClaveOrgTextBox.Text.Trim(), patron))
+            {
+                claveLabel2.Visible = false;
+                clave = ClaveOrgTextBox.Text;
+                if (checkButton())
+                {
+                    ContinuarButton.Enabled = true;
+                }
+                else
+                {
+                    ContinuarButton.Enabled = false;
+                }
+            }
+            else
+            {
+                claveLabel2.Visible = true;
+            }
+        }
         private void NombreTutorTextBox_TextChanged(object sender, EventArgs e)
         {
             nombreTutorUPV = NombreTutorTextBox.Text;
@@ -490,5 +526,12 @@ namespace AppFormulario.Presentacion
             }
             catch (ServiceException) { }
         }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

@@ -5,7 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -25,7 +27,9 @@ namespace AppFormulario.Presentacion
         {
             InitializeComponent();
             AñadirButton.Enabled = false;
+            EliminarButton.Enabled = false;
             GenerarButton.Enabled = true;
+            NIFLabel.Visible = false;
         }
 
 
@@ -109,15 +113,49 @@ namespace AppFormulario.Presentacion
 
         private void NIFBeneficiarioTextBox_TextChanged(object sender, EventArgs e)
         {
-            NIFBeneficiario = NIFBeneficiarioTextBox.Text;
-            if (checkAñadirButton())
+            string patron = @"^\d{8}[A-Za-z]$";
+            if (Regex.IsMatch(NIFBeneficiarioTextBox.Text.Trim(), patron))
             {
-                AñadirButton.Enabled = true;
+                NIFLabel.Visible = false;
+                NIFBeneficiario = NIFBeneficiarioTextBox.Text;
+                if (VerificarDNIUnico(NIFBeneficiarioTextBox.Text.Trim()))
+                {
+                    if (checkAñadirButton())
+                    {
+                        AñadirButton.Enabled = true;
+                    }
+                    else
+                    {
+                        AñadirButton.Enabled = false;
+                    }
+                }
+                else
+                {
+                    NIFLabel.Text = "DNI ya existe";
+                    NIFLabel.Visible = true;
+                }
             }
             else
             {
-                AñadirButton.Enabled = false;
+                NIFLabel.Text = "Formato no válido";
+                NIFLabel.Visible = true;
             }
+        }
+
+        private bool VerificarDNIUnico(string dni)
+        {
+            // Iterar a través de todas las filas del DataGridView y verificar si el DNI está presente
+            foreach (DataGridViewRow fila in dataGridView1.Rows)
+            {
+                // Se verifica si la celda de la columna 3 no es nula y si su valor es igual al DNI ingresado
+                if (fila.Cells[2].Value != null && fila.Cells[2].Value.ToString() == dni)
+                {
+                    // Si se encuentra una coincidencia, el DNI no es único
+                    return false;
+                }
+            }
+            // Si no se encontraron coincidencias, el DNI es único
+            return true;
         }
 
         private void ParentescoBeneficiarioTextBox_TextChanged(object sender, EventArgs e)
@@ -171,6 +209,13 @@ namespace AppFormulario.Presentacion
             NIFBeneficiarioTextBox.Clear();
             ParentescoBeneficiarioTextBox.Clear();
             PorcentajeBeneficiarioTextBox.Clear();
+
+            nombreBeneficiario = "";
+            NIFBeneficiario = "";
+            parentescoBeneficiario = "";
+            porcentajeBeneficiario = "";
+
+            NIFLabel.Visible = false;
         }
 
         private void GenerarButton_Click(object sender, EventArgs e)
@@ -183,6 +228,28 @@ namespace AppFormulario.Presentacion
                 //this.Close();
             }
             catch (ServiceException) { }
+        }
+
+        private void EliminarFila(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EliminarButton_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                {
+                    // Eliminar la fila del DataGridView
+                    dataGridView1.Rows.Remove(row);
+                }
+            }
+        }
+
+        private void DataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            EliminarButton.Enabled = true;
         }
     }
 }

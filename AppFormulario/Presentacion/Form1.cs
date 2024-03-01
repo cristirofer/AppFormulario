@@ -49,6 +49,7 @@ namespace AppFormulario
         public string IBAN = "";
         public string CC = "";
         List<string> titulaciones = new List<string>();
+        public string titulacionText = "";
 
         public Form1()
         {
@@ -67,9 +68,6 @@ namespace AppFormulario
 
             string[] opciones = { "G. Ing. Física", "G. Ing. Tecnologías y Servicios de Telecomunicación", "G. Tecnología Digital y Multimedia", "M. Ing. Sistemas Electrónicos", "M. Ing. Telecomunicación", "M. Tecnologías Sistemas y Redes de Comunicación", "DG. ADE + Ing. Tecnologías y Servicios Telecom.", "DG. Matemáticas + ADE", "DG. Matemáticas + Ing. Civil", "DG. Matemáticas + Ing. Informática", "DG. Matemáticas + Ing. Tecn. y Serv. Telecom.", "DM. Ing. Sistemas Electrónicos + Ing. Telecom.", "DM. Ing. Telecom + Ing. Tecn. y Serv. Telecom." };
             titulacionComboBox.Items.AddRange(opciones);
-            titulacionComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            titulacionComboBox.SelectionMode = SelectionMode.MultiSimple;
-            titulacionComboBox.SelectedIndexChanged += TitulacionComboBox_SelectedIndexChanged;
         }
 
         private bool checkButton()
@@ -507,13 +505,9 @@ namespace AppFormulario
 
         private void TitulacionComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<string> elementosSeleccionados = new List<string>();
-
-            // Iterar sobre los elementos seleccionados y agregarlos a la lista
-            foreach (var item in titulacionComboBox.SelectedItems)
-            {
-                titulaciones.Add(item.ToString());
-            }
+            titulaciones.Add(titulacionComboBox.SelectedItem.ToString());
+            titulacionText+= titulacionComboBox.SelectedItem.ToString();
+            titulacionComboBox.Text += titulacionText;
 
 
         }

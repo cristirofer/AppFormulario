@@ -49,6 +49,8 @@
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
+            NIFLabel = new Label();
+            EliminarButton = new Button();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -112,9 +114,11 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
             dataGridView1.Location = new Point(153, 257);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(795, 336);
+            dataGridView1.Size = new Size(795, 317);
             dataGridView1.TabIndex = 150;
+            dataGridView1.AllowUserToDeleteRowsChanged += EliminarFila;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.SelectionChanged += DataGridView1_SelectionChanged;
             // 
             // Column1
             // 
@@ -191,7 +195,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(153, 161);
+            label2.Location = new Point(153, 152);
             label2.Name = "label2";
             label2.Size = new Size(177, 15);
             label2.TabIndex = 156;
@@ -200,7 +204,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(462, 161);
+            label3.Location = new Point(462, 152);
             label3.Name = "label3";
             label3.Size = new Size(25, 15);
             label3.TabIndex = 157;
@@ -209,7 +213,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(592, 161);
+            label4.Location = new Point(592, 152);
             label4.Name = "label4";
             label4.Size = new Size(65, 15);
             label4.TabIndex = 158;
@@ -218,17 +222,40 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(715, 161);
+            label5.Location = new Point(715, 152);
             label5.Name = "label5";
             label5.Size = new Size(63, 15);
             label5.TabIndex = 159;
             label5.Text = "Porcentaje";
+            // 
+            // NIFLabel
+            // 
+            NIFLabel.AutoSize = true;
+            NIFLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            NIFLabel.ForeColor = Color.Red;
+            NIFLabel.Location = new Point(462, 176);
+            NIFLabel.Name = "NIFLabel";
+            NIFLabel.Size = new Size(101, 13);
+            NIFLabel.TabIndex = 160;
+            NIFLabel.Text = "Formato no válido";
+            // 
+            // EliminarButton
+            // 
+            EliminarButton.Location = new Point(873, 591);
+            EliminarButton.Name = "EliminarButton";
+            EliminarButton.Size = new Size(75, 23);
+            EliminarButton.TabIndex = 161;
+            EliminarButton.Text = "Eliminar";
+            EliminarButton.UseVisualStyleBackColor = true;
+            EliminarButton.Click += EliminarButton_Click;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1102, 741);
+            Controls.Add(EliminarButton);
+            Controls.Add(NIFLabel);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -274,5 +301,7 @@
         private Label label3;
         private Label label4;
         private Label label5;
+        private Label NIFLabel;
+        private Button EliminarButton;
     }
 }
