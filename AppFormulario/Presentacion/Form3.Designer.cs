@@ -57,7 +57,7 @@
             // 
             // AnteriorButton
             // 
-            AnteriorButton.Location = new Point(873, 696);
+            AnteriorButton.Location = new Point(873, 758);
             AnteriorButton.Name = "AnteriorButton";
             AnteriorButton.Size = new Size(75, 23);
             AnteriorButton.TabIndex = 148;
@@ -67,7 +67,7 @@
             // 
             // GenerarButton
             // 
-            GenerarButton.Location = new Point(976, 696);
+            GenerarButton.Location = new Point(976, 758);
             GenerarButton.Name = "GenerarButton";
             GenerarButton.Size = new Size(75, 23);
             GenerarButton.TabIndex = 147;
@@ -112,9 +112,9 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
-            dataGridView1.Location = new Point(153, 257);
+            dataGridView1.Location = new Point(153, 272);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(795, 317);
+            dataGridView1.Size = new Size(795, 367);
             dataGridView1.TabIndex = 150;
             dataGridView1.AllowUserToDeleteRowsChanged += EliminarFila;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
@@ -152,7 +152,7 @@
             // 
             // NombreBeneficiarioTextBox
             // 
-            NombreBeneficiarioTextBox.Location = new Point(153, 191);
+            NombreBeneficiarioTextBox.Location = new Point(153, 206);
             NombreBeneficiarioTextBox.Name = "NombreBeneficiarioTextBox";
             NombreBeneficiarioTextBox.Size = new Size(289, 23);
             NombreBeneficiarioTextBox.TabIndex = 151;
@@ -160,7 +160,7 @@
             // 
             // NIFBeneficiarioTextBox
             // 
-            NIFBeneficiarioTextBox.Location = new Point(462, 191);
+            NIFBeneficiarioTextBox.Location = new Point(462, 206);
             NIFBeneficiarioTextBox.Name = "NIFBeneficiarioTextBox";
             NIFBeneficiarioTextBox.Size = new Size(111, 23);
             NIFBeneficiarioTextBox.TabIndex = 152;
@@ -168,7 +168,7 @@
             // 
             // ParentescoBeneficiarioTextBox
             // 
-            ParentescoBeneficiarioTextBox.Location = new Point(592, 191);
+            ParentescoBeneficiarioTextBox.Location = new Point(592, 206);
             ParentescoBeneficiarioTextBox.Name = "ParentescoBeneficiarioTextBox";
             ParentescoBeneficiarioTextBox.Size = new Size(105, 23);
             ParentescoBeneficiarioTextBox.TabIndex = 153;
@@ -176,7 +176,7 @@
             // 
             // PorcentajeBeneficiarioTextBox
             // 
-            PorcentajeBeneficiarioTextBox.Location = new Point(715, 191);
+            PorcentajeBeneficiarioTextBox.Location = new Point(715, 206);
             PorcentajeBeneficiarioTextBox.Name = "PorcentajeBeneficiarioTextBox";
             PorcentajeBeneficiarioTextBox.Size = new Size(115, 23);
             PorcentajeBeneficiarioTextBox.TabIndex = 154;
@@ -184,7 +184,7 @@
             // 
             // AñadirButton
             // 
-            AñadirButton.Location = new Point(873, 190);
+            AñadirButton.Location = new Point(873, 205);
             AñadirButton.Name = "AñadirButton";
             AñadirButton.Size = new Size(75, 23);
             AñadirButton.TabIndex = 155;
@@ -195,7 +195,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(153, 152);
+            label2.Location = new Point(153, 167);
             label2.Name = "label2";
             label2.Size = new Size(177, 15);
             label2.TabIndex = 156;
@@ -204,7 +204,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(462, 152);
+            label3.Location = new Point(462, 167);
             label3.Name = "label3";
             label3.Size = new Size(25, 15);
             label3.TabIndex = 157;
@@ -213,7 +213,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(592, 152);
+            label4.Location = new Point(592, 167);
             label4.Name = "label4";
             label4.Size = new Size(65, 15);
             label4.TabIndex = 158;
@@ -222,7 +222,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(715, 152);
+            label5.Location = new Point(715, 167);
             label5.Name = "label5";
             label5.Size = new Size(63, 15);
             label5.TabIndex = 159;
@@ -233,7 +233,7 @@
             NIFLabel.AutoSize = true;
             NIFLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NIFLabel.ForeColor = Color.Red;
-            NIFLabel.Location = new Point(462, 176);
+            NIFLabel.Location = new Point(462, 191);
             NIFLabel.Name = "NIFLabel";
             NIFLabel.Size = new Size(101, 13);
             NIFLabel.TabIndex = 160;
@@ -241,7 +241,7 @@
             // 
             // EliminarButton
             // 
-            EliminarButton.Location = new Point(873, 591);
+            EliminarButton.Location = new Point(873, 645);
             EliminarButton.Name = "EliminarButton";
             EliminarButton.Size = new Size(75, 23);
             EliminarButton.TabIndex = 161;
@@ -253,7 +253,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1102, 741);
+            ClientSize = new Size(1102, 816);
             Controls.Add(EliminarButton);
             Controls.Add(NIFLabel);
             Controls.Add(label5);

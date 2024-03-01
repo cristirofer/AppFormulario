@@ -95,7 +95,7 @@
             // 
             // NombreTextBox
             // 
-            NombreTextBox.Location = new Point(255, 135);
+            NombreTextBox.Location = new Point(255, 155);
             NombreTextBox.Name = "NombreTextBox";
             NombreTextBox.Size = new Size(727, 23);
             NombreTextBox.TabIndex = 0;
@@ -116,7 +116,7 @@
             // 
             // PaisTextBox
             // 
-            PaisTextBox.Location = new Point(255, 216);
+            PaisTextBox.Location = new Point(255, 236);
             PaisTextBox.Name = "PaisTextBox";
             PaisTextBox.Size = new Size(241, 23);
             PaisTextBox.TabIndex = 2;
@@ -125,7 +125,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(96, 135);
+            label2.Location = new Point(96, 155);
             label2.Name = "label2";
             label2.Size = new Size(112, 15);
             label2.TabIndex = 4;
@@ -135,7 +135,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(179, 175);
+            label3.Location = new Point(179, 195);
             label3.Name = "label3";
             label3.Size = new Size(27, 15);
             label3.TabIndex = 5;
@@ -145,7 +145,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(178, 216);
+            label4.Location = new Point(178, 236);
             label4.Name = "label4";
             label4.Size = new Size(28, 15);
             label4.TabIndex = 6;
@@ -154,7 +154,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(609, 220);
+            label6.Location = new Point(609, 240);
             label6.Name = "label6";
             label6.Size = new Size(103, 15);
             label6.TabIndex = 8;
@@ -163,7 +163,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(656, 261);
+            label7.Location = new Point(656, 281);
             label7.Name = "label7";
             label7.Size = new Size(56, 15);
             label7.TabIndex = 9;
@@ -171,7 +171,7 @@
             // 
             // NacimientoTextBox
             // 
-            NacimientoTextBox.Location = new Point(741, 220);
+            NacimientoTextBox.Location = new Point(741, 240);
             NacimientoTextBox.Name = "NacimientoTextBox";
             NacimientoTextBox.Size = new Size(241, 23);
             NacimientoTextBox.TabIndex = 14;
@@ -179,7 +179,7 @@
             // 
             // ProvinciaTextBox
             // 
-            ProvinciaTextBox.Location = new Point(741, 261);
+            ProvinciaTextBox.Location = new Point(741, 281);
             ProvinciaTextBox.Name = "ProvinciaTextBox";
             ProvinciaTextBox.Size = new Size(241, 23);
             ProvinciaTextBox.TabIndex = 15;
@@ -187,7 +187,7 @@
             // 
             // MunicipioTextBox
             // 
-            MunicipioTextBox.Location = new Point(741, 302);
+            MunicipioTextBox.Location = new Point(741, 322);
             MunicipioTextBox.Name = "MunicipioTextBox";
             MunicipioTextBox.Size = new Size(241, 23);
             MunicipioTextBox.TabIndex = 16;
@@ -195,7 +195,7 @@
             // 
             // DireccionTextBox
             // 
-            DireccionTextBox.Location = new Point(255, 257);
+            DireccionTextBox.Location = new Point(255, 277);
             DireccionTextBox.Name = "DireccionTextBox";
             DireccionTextBox.Size = new Size(241, 23);
             DireccionTextBox.TabIndex = 17;
@@ -203,7 +203,7 @@
             // 
             // PostalTextBox
             // 
-            PostalTextBox.Location = new Point(255, 298);
+            PostalTextBox.Location = new Point(255, 318);
             PostalTextBox.Name = "PostalTextBox";
             PostalTextBox.Size = new Size(241, 23);
             PostalTextBox.TabIndex = 18;
@@ -211,7 +211,7 @@
             // 
             // TelefonoTextBox
             // 
-            TelefonoTextBox.Location = new Point(741, 343);
+            TelefonoTextBox.Location = new Point(741, 363);
             TelefonoTextBox.Name = "TelefonoTextBox";
             TelefonoTextBox.Size = new Size(241, 23);
             TelefonoTextBox.TabIndex = 19;
@@ -220,7 +220,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(151, 257);
+            label8.Location = new Point(151, 277);
             label8.Name = "label8";
             label8.Size = new Size(57, 15);
             label8.TabIndex = 20;
@@ -229,7 +229,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(158, 298);
+            label9.Location = new Point(158, 318);
             label9.Name = "label9";
             label9.Size = new Size(50, 15);
             label9.TabIndex = 21;
@@ -238,7 +238,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(660, 343);
+            label10.Location = new Point(660, 363);
             label10.Name = "label10";
             label10.Size = new Size(52, 15);
             label10.TabIndex = 22;
@@ -247,7 +247,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(651, 302);
+            label11.Location = new Point(651, 322);
             label11.Name = "label11";
             label11.Size = new Size(61, 15);
             label11.TabIndex = 23;
@@ -255,7 +255,7 @@
             // 
             // EmailTextBox
             // 
-            EmailTextBox.Location = new Point(255, 339);
+            EmailTextBox.Location = new Point(255, 359);
             EmailTextBox.Name = "EmailTextBox";
             EmailTextBox.Size = new Size(241, 23);
             EmailTextBox.TabIndex = 24;
@@ -264,7 +264,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(587, 384);
+            label12.Location = new Point(587, 404);
             label12.Name = "label12";
             label12.Size = new Size(125, 15);
             label12.TabIndex = 26;
@@ -273,7 +273,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(103, 339);
+            label13.Location = new Point(103, 359);
             label13.Name = "label13";
             label13.Size = new Size(105, 15);
             label13.TabIndex = 27;
@@ -281,7 +281,7 @@
             // 
             // DNITextBox
             // 
-            DNITextBox.Location = new Point(255, 175);
+            DNITextBox.Location = new Point(255, 195);
             DNITextBox.Name = "DNITextBox";
             DNITextBox.Size = new Size(191, 23);
             DNITextBox.TabIndex = 29;
@@ -289,7 +289,7 @@
             // 
             // NIFTextBox
             // 
-            NIFTextBox.Location = new Point(468, 175);
+            NIFTextBox.Location = new Point(468, 195);
             NIFTextBox.Name = "NIFTextBox";
             NIFTextBox.Size = new Size(28, 23);
             NIFTextBox.TabIndex = 30;
@@ -297,7 +297,7 @@
             // 
             // NumeroAfiliacionTextBox
             // 
-            NumeroAfiliacionTextBox.Location = new Point(741, 384);
+            NumeroAfiliacionTextBox.Location = new Point(741, 404);
             NumeroAfiliacionTextBox.Name = "NumeroAfiliacionTextBox";
             NumeroAfiliacionTextBox.Size = new Size(191, 23);
             NumeroAfiliacionTextBox.TabIndex = 31;
@@ -305,7 +305,7 @@
             // 
             // LetraAfiliacionTextBox
             // 
-            LetraAfiliacionTextBox.Location = new Point(954, 384);
+            LetraAfiliacionTextBox.Location = new Point(954, 404);
             LetraAfiliacionTextBox.Name = "LetraAfiliacionTextBox";
             LetraAfiliacionTextBox.Size = new Size(28, 23);
             LetraAfiliacionTextBox.TabIndex = 32;
@@ -315,7 +315,7 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            label14.Location = new Point(83, 413);
+            label14.Location = new Point(83, 433);
             label14.Name = "label14";
             label14.Size = new Size(0, 21);
             label14.TabIndex = 33;
@@ -323,7 +323,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(158, 492);
+            label15.Location = new Point(158, 541);
             label15.Name = "label15";
             label15.Size = new Size(50, 15);
             label15.TabIndex = 34;
@@ -332,7 +332,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(105, 534);
+            label16.Location = new Point(105, 583);
             label16.Name = "label16";
             label16.Size = new Size(103, 15);
             label16.TabIndex = 35;
@@ -341,7 +341,7 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(613, 492);
+            label17.Location = new Point(613, 541);
             label17.Name = "label17";
             label17.Size = new Size(99, 15);
             label17.TabIndex = 36;
@@ -350,7 +350,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(651, 534);
+            label18.Location = new Point(651, 583);
             label18.Name = "label18";
             label18.Size = new Size(61, 15);
             label18.TabIndex = 37;
@@ -359,7 +359,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(174, 576);
+            label19.Location = new Point(174, 625);
             label19.Name = "label19";
             label19.Size = new Size(34, 15);
             label19.TabIndex = 38;
@@ -368,7 +368,7 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(585, 576);
+            label20.Location = new Point(585, 625);
             label20.Name = "label20";
             label20.Size = new Size(127, 15);
             label20.TabIndex = 39;
@@ -376,7 +376,7 @@
             // 
             // EntidadTextBox
             // 
-            EntidadTextBox.Location = new Point(255, 492);
+            EntidadTextBox.Location = new Point(255, 541);
             EntidadTextBox.Name = "EntidadTextBox";
             EntidadTextBox.Size = new Size(241, 23);
             EntidadTextBox.TabIndex = 40;
@@ -384,7 +384,7 @@
             // 
             // DireccionAgenciaTextBox
             // 
-            DireccionAgenciaTextBox.Location = new Point(255, 534);
+            DireccionAgenciaTextBox.Location = new Point(255, 583);
             DireccionAgenciaTextBox.Name = "DireccionAgenciaTextBox";
             DireccionAgenciaTextBox.Size = new Size(241, 23);
             DireccionAgenciaTextBox.TabIndex = 41;
@@ -392,7 +392,7 @@
             // 
             // IBANTextBox
             // 
-            IBANTextBox.Location = new Point(255, 576);
+            IBANTextBox.Location = new Point(255, 625);
             IBANTextBox.Name = "IBANTextBox";
             IBANTextBox.Size = new Size(241, 23);
             IBANTextBox.TabIndex = 42;
@@ -400,7 +400,7 @@
             // 
             // AgenciaTextBox
             // 
-            AgenciaTextBox.Location = new Point(741, 492);
+            AgenciaTextBox.Location = new Point(741, 541);
             AgenciaTextBox.Name = "AgenciaTextBox";
             AgenciaTextBox.Size = new Size(241, 23);
             AgenciaTextBox.TabIndex = 43;
@@ -408,7 +408,7 @@
             // 
             // MunicipioTextBox2
             // 
-            MunicipioTextBox2.Location = new Point(741, 534);
+            MunicipioTextBox2.Location = new Point(741, 583);
             MunicipioTextBox2.Name = "MunicipioTextBox2";
             MunicipioTextBox2.Size = new Size(241, 23);
             MunicipioTextBox2.TabIndex = 44;
@@ -416,7 +416,7 @@
             // 
             // CCTextBox
             // 
-            CCTextBox.Location = new Point(741, 576);
+            CCTextBox.Location = new Point(741, 625);
             CCTextBox.Name = "CCTextBox";
             CCTextBox.Size = new Size(241, 23);
             CCTextBox.TabIndex = 45;
@@ -424,7 +424,7 @@
             // 
             // ContinuarButton
             // 
-            ContinuarButton.Location = new Point(973, 694);
+            ContinuarButton.Location = new Point(973, 764);
             ContinuarButton.Name = "ContinuarButton";
             ContinuarButton.Size = new Size(75, 23);
             ContinuarButton.TabIndex = 46;
@@ -435,7 +435,7 @@
             // 
             // CancelarButton
             // 
-            CancelarButton.Location = new Point(870, 694);
+            CancelarButton.Location = new Point(870, 764);
             CancelarButton.Name = "CancelarButton";
             CancelarButton.Size = new Size(75, 23);
             CancelarButton.TabIndex = 47;
@@ -467,7 +467,7 @@
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(128, 384);
+            label21.Location = new Point(128, 404);
             label21.Name = "label21";
             label21.Size = new Size(78, 15);
             label21.TabIndex = 49;
@@ -476,7 +476,7 @@
             // titulacionComboBox
             // 
             titulacionComboBox.FormattingEnabled = true;
-            titulacionComboBox.Location = new Point(255, 384);
+            titulacionComboBox.Location = new Point(255, 404);
             titulacionComboBox.Name = "titulacionComboBox";
             titulacionComboBox.Size = new Size(241, 23);
             titulacionComboBox.TabIndex = 50;
@@ -486,7 +486,7 @@
             // 
             groupBox1.Controls.Add(groupBox2);
             groupBox1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            groupBox1.Location = new Point(51, 95);
+            groupBox1.Location = new Point(51, 115);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(997, 339);
             groupBox1.TabIndex = 51;
@@ -508,7 +508,7 @@
             groupBox3.Controls.Add(IBANLabel);
             groupBox3.Controls.Add(groupBox4);
             groupBox3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
-            groupBox3.Location = new Point(51, 452);
+            groupBox3.Location = new Point(51, 501);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(997, 170);
             groupBox3.TabIndex = 53;
@@ -551,7 +551,7 @@
             DNIlabel.AutoSize = true;
             DNIlabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             DNIlabel.ForeColor = Color.Red;
-            DNIlabel.Location = new Point(255, 161);
+            DNIlabel.Location = new Point(255, 181);
             DNIlabel.Name = "DNIlabel";
             DNIlabel.Size = new Size(101, 13);
             DNIlabel.TabIndex = 55;
@@ -562,7 +562,7 @@
             postalLabel.AutoSize = true;
             postalLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             postalLabel.ForeColor = Color.Red;
-            postalLabel.Location = new Point(255, 283);
+            postalLabel.Location = new Point(255, 303);
             postalLabel.Name = "postalLabel";
             postalLabel.Size = new Size(101, 13);
             postalLabel.TabIndex = 58;
@@ -573,7 +573,7 @@
             emailLabel.AutoSize = true;
             emailLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             emailLabel.ForeColor = Color.Red;
-            emailLabel.Location = new Point(255, 324);
+            emailLabel.Location = new Point(255, 344);
             emailLabel.Name = "emailLabel";
             emailLabel.Size = new Size(101, 13);
             emailLabel.TabIndex = 59;
@@ -584,7 +584,7 @@
             fechaLabel.AutoSize = true;
             fechaLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             fechaLabel.ForeColor = Color.Red;
-            fechaLabel.Location = new Point(741, 206);
+            fechaLabel.Location = new Point(741, 226);
             fechaLabel.Name = "fechaLabel";
             fechaLabel.Size = new Size(101, 13);
             fechaLabel.TabIndex = 61;
@@ -595,7 +595,7 @@
             telefonoLabel.AutoSize = true;
             telefonoLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             telefonoLabel.ForeColor = Color.Red;
-            telefonoLabel.Location = new Point(741, 328);
+            telefonoLabel.Location = new Point(741, 348);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new Size(101, 13);
             telefonoLabel.TabIndex = 64;
@@ -606,7 +606,7 @@
             NUSSLabel.AutoSize = true;
             NUSSLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NUSSLabel.ForeColor = Color.Red;
-            NUSSLabel.Location = new Point(741, 369);
+            NUSSLabel.Location = new Point(741, 389);
             NUSSLabel.Name = "NUSSLabel";
             NUSSLabel.Size = new Size(101, 13);
             NUSSLabel.TabIndex = 65;
@@ -614,7 +614,7 @@
             // 
             // NIETextBox
             // 
-            NIETextBox.Location = new Point(741, 175);
+            NIETextBox.Location = new Point(741, 195);
             NIETextBox.Name = "NIETextBox";
             NIETextBox.Size = new Size(241, 23);
             NIETextBox.TabIndex = 66;
@@ -625,7 +625,7 @@
             NIELabel.AutoSize = true;
             NIELabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             NIELabel.ForeColor = Color.Red;
-            NIELabel.Location = new Point(741, 161);
+            NIELabel.Location = new Point(741, 181);
             NIELabel.Name = "NIELabel";
             NIELabel.Size = new Size(101, 13);
             NIELabel.TabIndex = 67;
@@ -634,7 +634,7 @@
             // label22
             // 
             label22.AutoSize = true;
-            label22.Location = new Point(687, 175);
+            label22.Location = new Point(687, 195);
             label22.Name = "label22";
             label22.Size = new Size(25, 15);
             label22.TabIndex = 68;
@@ -644,7 +644,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1102, 741);
+            ClientSize = new Size(1102, 816);
             Controls.Add(label22);
             Controls.Add(NIELabel);
             Controls.Add(NIETextBox);
