@@ -243,6 +243,14 @@ namespace AppFormulario.Presentacion
                 {
                     // Eliminar la fila del DataGridView
                     dataGridView1.Rows.Remove(row);
+                    if (checkGenerarButton())
+                    {
+                        GenerarButton.Enabled = true;
+                    }
+                    else
+                    {
+                        GenerarButton.Enabled = false;
+                    }
                 }
             }
         }
